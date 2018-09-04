@@ -1,0 +1,20 @@
+<template name="renting">
+  <view class="renting-container">
+    <view bindtap="onRentingDetail"><image src="{{img}}" class="image"></image></view>
+    <view class="renting-detail">
+      <view class="title" bindtap="onRentingDetail">{{title}}</view>
+      <view class="room-detail">
+        <view>{{condition}}空</view>
+        <view>{{area}}平米</view>
+        <view>{{roomtype}}</view>
+      </view>
+
+      <view class="address-detail">{{address}}</view>
+
+      <view class="rent">
+        <view class="money">{{rent}} 元/月</view>
+        <view class="calling">打电话</view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,7 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/post/post",
+    "pages/latest/latest"
+  ]
+}

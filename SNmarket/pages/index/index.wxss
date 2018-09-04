@@ -1,0 +1,77 @@
+@import "../../templates/tabBar-template/tabBar.wxss";
+@import "../../templates/renting-template/renting.wxss";
+
+.index-container{
+  z-index:1;
+}
+
+.top-container{
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  margin-top:30rpx;
+}
+
+.left{
+  margin-right:20rpx;
+  margin-left:30rpx;
+}
+
+.location{
+  font-size:30rpx;
+}
+
+.down-icon{
+  width:60rpx;
+  height:60rpx;
+}
+
+.right{
+  border:1px solid #e60a2e;
+  height:80rpx;
+  width:81%;
+}
+
+.right input{
+  font-size:28rpx;
+  height:80rpx;
+  padding-left:20rpx;
+}
+
+.function-container{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+.functions{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  margin-top:30rpx;
+}
+
+.icons{
+  width:90rpx;
+  height:90rpx;
+}
+
+.function-txt{
+  font-size:28rpx;
+  text-align:center;
+}
+
+.swiper-container{
+  margin-top:30rpx;
+  margin-left:15rpx;
+}
+
+.renting-title{
+  margin-top:20rpx;
+  margin-left:15rpx;
+  font-size:30rpx;
+  font-weight:bold;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+}
