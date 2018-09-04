@@ -1,6 +1,6 @@
-#@Author:chenzhengqiang
-#@Start date:2018/09/04 13:50:13
-#@Modified date:
+# @Author:chenzhengqiang
+# @Start date:2018/09/04 13:50:13
+# @Modified date:
 
 
 Copyright
@@ -18,8 +18,6 @@ Build instructions
 
 Structure
 ---------
-#write the structure of project here
 
 Usage
 -----
-#write the usage of software here
