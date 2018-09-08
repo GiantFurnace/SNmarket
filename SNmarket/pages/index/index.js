@@ -1,5 +1,6 @@
 var tabBar = require('../../templates/tabBar-template/tabBar.js');
 var renting_data = require('../../data/renting-data.js');
+var util = require('../../data/copyright-data.js');
 
 Page({
 
@@ -21,13 +22,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
-    this.setData({ renting_data:renting_data.rentingData });
+    var time = util.formatTime(new Date());
+    this.setData({
+      renting_data:renting_data.rentingData,
+      time:time
+    });
     tabBar.tabbar("tabBar",0,this);
+
   },
 
   onRentingDetail:function(e){
-    console.log('yes');
+    var rid = e.currentTarget.dataset.rid;
+    
+    wx.navigateTo({
+      url: '../renting-detail/renting-detail?id=' + rid
+    })
+  },
+
+  onPhoneCall:function(e){
+    var telephone = e.currentTarget.dataset.phone;
+    wx.makePhoneCall({
+      phoneNumber:telephone
+    })
   },
 
   /**

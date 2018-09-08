@@ -1,5 +1,6 @@
 <import src="../../templates/tabBar-template/tabBar.wxml" />
 <import src="../../templates/renting-template/renting.wxml" />
+<import src="../../templates/copyright-template/copyright.wxml" />
 
 <view class="index-container">
   <!-- 顶部搜索栏 -->
@@ -71,5 +72,7 @@
   <!-- 底部tabBar -->
   <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
   <!-- /底部tabBar -->
+  
+  <template is="copyright" data="{{time}}" />
 
 </view>

@@ -1,5 +1,6 @@
 @import "../../templates/tabBar-template/tabBar.wxss";
 @import "../../templates/renting-template/renting.wxss";
+@import "../../templates/copyright-template/copyright.wxss";
 
 .index-container{
   z-index:1;
