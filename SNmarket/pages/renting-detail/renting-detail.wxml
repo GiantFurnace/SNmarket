@@ -1,0 +1,48 @@
+
+<view class="detail-container">
+  <view class="room-img">
+    <image src="/images/one.png" class="room-profile"></image>
+  </view>
+  <view class="room-title">{{data.title}}</view>
+
+  <view class="room-date-view">
+    <view class="date">发布日期：{{data.date}}</view>
+    <view class="view">浏览：{{data.view}}</view>
+    <view class="clear"></view>
+  </view>
+
+  <view class="room-style-rent">
+    <view class="style">
+      <view>户型</view>
+      <view class="highlight">{{data.roomType}}</view>
+    </view>
+    <view class="rent">
+      <view>租金</view>
+      <view class="highlight">{{data.rent}}元/月</view>
+    </view>
+  </view>
+
+  <view class="room-detail">
+    <view class="detail">
+      <view class="detail-left">
+        <view>面积：{{data.area}}平方</view>
+        <view>朝向：{{data.position}}</view>
+      </view>
+      <view class="detail-right">
+        <view>楼层：{{data.floor}}层</view>
+        <view>付款：{{data.payMethod}}</view>
+      </view>
+    </view>
+    <view class="detail-address">地址：{{data.address}}</view>
+  </view>
+
+  <view class="room-configuration">
+    <view class="configuration-title">房间配置信息</view>
+    <view>{{data.description}}</view>
+  </view>
+
+  <view class="phone-call" bindtap="onPhoneCall" data-phone="{{data.phone}}">
+    <view><image src="/images/icon/phone-call.png" class="phone-icon"></image></view>
+    <view>咨询</view>
+  </view>
+</view>
