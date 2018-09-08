@@ -2,6 +2,11 @@
   "pages":[
     "pages/index/index",
     "pages/post/post",
-    "pages/latest/latest"
-  ]
+    "pages/latest/latest",
+    "pages/renting-detail/renting-detail"
+    
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#e60a2e"
+  }  
 }
