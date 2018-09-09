@@ -1,9 +1,10 @@
 <import src="../../templates/tabBar-template/tabBar.wxml" />
 <import src="../../templates/renting-template/renting.wxml" />
 <import src="../../templates/copyright-template/copyright.wxml" />
+<import src="../../templates/function-template/function.wxml" />
 
 <view class="index-container">
-  <!-- 顶部搜索栏 -->
+  <!-- 顶部功能栏 -->
   <view class="top-container">
     <view class="left">
       <view class="location">广州</view>
@@ -11,52 +12,51 @@
         <image src="/images/icon/down.png" class="down-icon"></image>
       </view>
     </view>
+
     <view class="right">
-      <input placeholder='租房，门面，二手车'></input>
+      <view>买卖市场</view>
+      <view>技术服务</view>
+      <view>广告合作</view>
     </view>
+
   </view>
-  <!-- /顶部搜索栏 -->  
+
+  <!-- /顶部搜索栏 -->
 
   <!-- 功能列表 -->
   <view class="function-container">
-    <view class="functions">
-      <view>
-        <image src="/images/icon/zufang.png" class="icons"></image>
-        <view class="function-txt">租房</view>
-      </view>
-      <view>
-        <image src="/images/icon/maifang.png" class="icons"></image>
-        <view class="function-txt">卖房</view>
-      </view>
-      <view>
-        <image src="/images/icon/menmian.png" class="icons"></image>
-        <view class="function-txt">门面</view>
-      </view>
-    </view>
+
+    <template is="function" />
 
     <view class="functions">
       <view>
-        <image src="/images/icon/zhaogong.png" class="icons"></image>
-        <view class="function-txt">招工</view>
+        <navigator open-type="navigate" url="../zhaogong/zhaogong">
+          <image src="/images/icon/zhaogong.png" class="icons"></image>
+          <view class="function-txt">招工</view>
+        </navigator>
       </view>
       <view>
-        <image src="/images/icon/paotui.png" class="icons"></image>
-        <view class="function-txt">跑腿</view>
+        <navigator open-type="navigate" url="../paotui/paotui">
+          <image src="/images/icon/paotui.png" class="icons"></image>
+          <view class="function-txt">跑腿</view>
+        </navigator>
       </view>
       <view>
-        <image src="/images/icon/ershou.png" class="icons"></image>
-        <view class="function-txt">二手</view>
+        <navigator open-type="navigate" url="../ershou/ershou">
+          <image src="/images/icon/ershou.png" class="icons"></image>
+          <view class="function-txt">二手</view>
+        </navigator>
       </view>
     </view>
   </view>
-  <!-- /功能列表 -->  
+  <!-- /功能列表 -->
 
   <!-- 广告swiper -->
   <view class="swiper-container">
-    <swiper indicator-dots="false" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <swiper indicator-dots="{{falses}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{imgUrls}}" wx:key="{{key}}">
         <swiper-item>
-          <image src="{{item}}" style="width:98%;height:375rpx;"></image>
+          <image src="{{item}}" style="width:98%;height:185rpx;"></image>
         </swiper-item>
       </block>
     </swiper>
@@ -68,11 +68,11 @@
   <block wx:for="{{renting_data}}" wx:for-item="item" wx:key="key">
     <template is="renting" data="{{...item}}" />
   </block>
-  
+
   <!-- 底部tabBar -->
   <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
   <!-- /底部tabBar -->
-  
+
   <template is="copyright" data="{{time}}" />
 
 </view>

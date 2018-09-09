@@ -3,7 +3,13 @@
     "pages/index/index",
     "pages/post/post",
     "pages/latest/latest",
-    "pages/renting-detail/renting-detail"
+    "pages/renting-detail/renting-detail",
+    "pages/zufang/zufang",
+    "pages/maifang/maifang",
+    "pages/mengmian/mengmian",
+    "pages/zhaogong/zhaogong",
+    "pages/paotui/paotui",
+    "pages/ershou/ershou"
     
   ],
   "window":{

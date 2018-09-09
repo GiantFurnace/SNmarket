@@ -2,20 +2,14 @@
 @import "../../templates/renting-template/renting.wxss";
 @import "../../templates/copyright-template/copyright.wxss";
 
-.index-container{
-  z-index:1;
-}
-
 .top-container{
-  width:100%;
+  width:96%;
   display:flex;
   flex-direction:row;
+  justify-content:space-around;
   margin-top:30rpx;
-}
-
-.left{
-  margin-right:20rpx;
-  margin-left:30rpx;
+  border-bottom:1px solid #aaa;
+  margin-left:15rpx;
 }
 
 .location{
@@ -28,15 +22,10 @@
 }
 
 .right{
-  border:1px solid #e60a2e;
-  height:80rpx;
-  width:81%;
-}
-
-.right input{
-  font-size:28rpx;
-  height:80rpx;
-  padding-left:20rpx;
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
 }
 
 .function-container{
@@ -63,8 +52,9 @@
 }
 
 .swiper-container{
-  margin-top:30rpx;
+  height:200rpx;
   margin-left:15rpx;
+  margin-top:30rpx;
 }
 
 .renting-title{
