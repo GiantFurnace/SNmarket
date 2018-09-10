@@ -101,7 +101,7 @@
 
 .logo-img{
   width:95%;
-  height:280rpx;
+  height:270rpx;
 }
 
 .introduction{

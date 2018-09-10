@@ -16,7 +16,7 @@ function tabbarinit(){
     },
     {
       "current": "0",
-      "pagePath": "/pages/latest/latest",
+      "pagePath": "/pages/index/index",
       "iconPath": "/images/icon/latest.png",
       "selectedIconPath": "/images/icon/latest-active.png",
       "text": "最新"

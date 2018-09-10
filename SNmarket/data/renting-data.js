@@ -35,7 +35,7 @@ var local_database = [
     rent: "900",
     floor: "4/11",
     position: "西",
-    description:"房间里面有空调，电脑桌，有暖气呢!房间整齐无异味，内设空调电脑暖气。房间整齐无异味，内设空调电脑暖气。"
+    description:"房间里面有空调，电脑桌，有暖气呢!"
   }
 ]
 

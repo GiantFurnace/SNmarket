@@ -16,7 +16,8 @@ Page({
     autoplay:true,
     interval:5000,
     duration:1000,
-    current:0
+    current:0,
+    city:""
   },
 
   /**
@@ -30,6 +31,32 @@ Page({
     });
     tabBar.tabbar("tabBar",0,this);
 
+    this.loadInfo();
+
+  },
+
+  loadInfo:function(e){
+    wx.getLocation({
+      type:'wgs84',
+      success:res=>{
+        var longitude = res.longitude;
+        var latitude = res.latitude;
+        this.loadCity(longitude,latitude);
+      }
+    })
+  },
+
+  loadCity(longitude,latitude){
+    wx.request({
+      url: "https://http://api.map.baidu.com/place/v2/search?ak=sHK3TLUjRfyxE5lq2Ka9wBNHhE32V7SV",
+      data:{},
+      header:{
+        'Content-Type':'application/json'
+      },
+      success:res=>{
+        console.log(res);
+      }
+    })
   },
 
   onRentingDetail:function(e){
