@@ -8,24 +8,46 @@
   flex-direction:row;
   justify-content:space-around;
   margin-top:30rpx;
-  border-bottom:1px solid #aaa;
+  border-bottom:1px solid #dedede;
   margin-left:15rpx;
-}
-
-.location{
   font-size:30rpx;
 }
 
+.left{
+  width:10%;
+  text-align:center;
+}
+
+.location{
+  font-size:20rpx;
+}
+
 .down-icon{
-  width:60rpx;
-  height:60rpx;
+  width:50rpx;
+  height:50rpx;
 }
 
 .right{
-  width:100%;
+  width:80%;
   display:flex;
   flex-direction:row;
   justify-content:space-around;
+}
+
+.line{
+  border-bottom:2px solid #e60a2e;
+}
+
+.current{
+  color:#e60a2e;
+}
+
+.show{
+  display:block;
+}
+
+.hidden{
+  display:none;
 }
 
 .function-container{
@@ -66,3 +88,108 @@
   flex-direction:row;
   justify-content:space-around;
 }
+
+ /* 技术服务页面样式 */
+
+.img-container{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:30rpx;
+}
+
+.logo-img{
+  width:95%;
+  height:280rpx;
+}
+
+.introduction{
+  margin-top:30rpx;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.in-title, .service-title, .co-title{
+  width:95%;
+}
+
+.in-introduction, .service-item, .pnumber, .illustration-item{
+  width:95%;
+  font-size:24rpx;
+  margin-top:15rpx;
+}
+
+.se-container, .co-container{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:50rpx;
+}
+
+.co-container{
+  margin-bottom:50rpx;
+}
+
+ /* /技术服务页面样式 */
+
+ /* 广告合作页面样式 */
+
+ .ad-container{
+   width:100%;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+ }
+
+ .ad-title{
+   margin-top:30rpx;
+   font-size:32rpx;
+ }
+
+ .table{
+   width:95%;
+   margin-top:30rpx;
+   margin-bottom:30rpx;
+   border-top:1px solid #e60a2e;
+   border-left:1px solid #e60a2e;
+ }
+
+ .tr{
+   display:flex;
+   flex-direction:row;
+   padding:15rpx;
+   border-right:1px solid #e60a2e;
+   border-bottom:1px solid #e60a2e;
+   text-align:center;
+ }
+
+ .thead{
+   font-size:28rpx;
+   font-weight:bold;
+   background:#e60a2e;
+   color:#fff;
+ }
+
+ .td{
+   font-size:28rpx;
+   width:25%;
+ }
+
+ .il-container{
+   width:100%;
+   display:flex;
+   flex-direction:column;
+   align-items:center;
+ }
+
+ .illustration{
+   width:95%;
+   font-size:30rpx;
+   font-weight:bold;
+ }
+
+ /* /广告合作页面样式 */ 

@@ -1,3 +1,4 @@
+<import src="../../templates/copyright-template/copyright.wxml" />
 
 <view class="detail-container">
   <view class="room-img">
@@ -45,4 +46,6 @@
     <view><image src="/images/icon/phone-call.png" class="phone-icon"></image></view>
     <view>咨询</view>
   </view>
+
+  <template is="copyright" data="{{time}}" />  
 </view>

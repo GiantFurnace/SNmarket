@@ -15,7 +15,8 @@ Page({
     ],
     autoplay:true,
     interval:5000,
-    duration:1000
+    duration:1000,
+    current:0
   },
 
   /**
@@ -43,6 +44,12 @@ Page({
     var telephone = e.currentTarget.dataset.phone;
     wx.makePhoneCall({
       phoneNumber:telephone
+    })
+  },
+
+  onChangeTap:function(e){
+    this.setData({
+      current:e.currentTarget.dataset.current
     })
   },
 

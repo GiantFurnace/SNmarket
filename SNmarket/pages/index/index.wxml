@@ -3,25 +3,28 @@
 <import src="../../templates/copyright-template/copyright.wxml" />
 <import src="../../templates/function-template/function.wxml" />
 
-<view class="index-container">
-  <!-- 顶部功能栏 -->
-  <view class="top-container">
-    <view class="left">
-      <view class="location">广州</view>
-      <view>
-        <image src="/images/icon/down.png" class="down-icon"></image>
-      </view>
+<!-- 顶部功能栏 -->
+<view class="top-container">
+  <view class="left">
+    <view class="location">广州</view>
+    <view>
+      <image src="/images/icon/down.png" class="down-icon"></image>
     </view>
-
-    <view class="right">
-      <view>买卖市场</view>
-      <view>技术服务</view>
-      <view>广告合作</view>
-    </view>
-
   </view>
 
-  <!-- /顶部搜索栏 -->
+  <view class="right">
+    <view class="{{current==0?'line':''}} {{current==0?'current':''}}" data-current="0" bindtap="onChangeTap">买卖市场</view>
+    <view class="{{current==1?'line':''}} {{current==1?'current':''}}" data-current="1" bindtap="onChangeTap">技术服务</view>
+    <view class="{{current==2?'line':''}} {{current==2?'current':''}}" data-current="2" bindtap="onChangeTap">广告合作</view>
+  </view>
+
+</view>
+
+<!-- /顶部功能栏 -->
+
+<!-- 买卖市场首页 -->
+
+<view class="index-container {{current==0?'show':'hidden'}}">
 
   <!-- 功能列表 -->
   <view class="function-container">
@@ -69,10 +72,87 @@
     <template is="renting" data="{{...item}}" />
   </block>
 
-  <!-- 底部tabBar -->
-  <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
-  <!-- /底部tabBar -->
-
-  <template is="copyright" data="{{time}}" />
-
 </view>
+<!-- /买卖市场首页 -->
+
+<!-- 技术服务页面 -->
+
+<view class="service-container {{current==1?'show':'hidden'}}">
+  <view class="img-container">
+    <image src="/images/logo.png" class="logo-img"></image>
+  </view>
+  <view class="introduction">
+    <view class="in-title">工作室简介：</view>
+    <view class="in-introduction">我们工作室成立于2018年8月，专注于具有成长性的互联网创业项目,目前已有数十位从事IT行业的中高端人才签约工作室...</view>
+  </view>
+
+  <view class="se-container">
+    <view class="service-title">对外外承接的技术服务:</view>
+    <view class="service-item">(1) 微信小程序制作，开发</view>
+    <view class="service-item">(2) 网站设计，手机app开发</view>
+    <view class="service-item">(3) 技术支持，提供技术解决方案，软件项目外包等</view>
+    <view class="service-item">(4) IT学习培训</view>
+  </view>
+
+  <view class="co-container">
+    <view class="co-title">服务合作联系</view>
+    <view class="pnumber">微信号：18819373904</view>
+  </view>
+</view>
+
+<!-- /技术服务页面 -->
+
+<!-- 广告合作页面 -->
+
+<view class="{{current==2?'show':'hidden'}}">
+  <view class="ad-container">
+    <view class="ad-title">2018年广告资源刊列表</view>
+    <view class="table">
+      <view class="tr thead">
+        <view class="td">广告位</view>
+        <view class="td">尺寸</view>
+        <view class="td">大小</view>
+        <view class="td">刊列价(元)/天</view>
+      </view>
+
+      <view class="tr">
+        <view class="td">首页</view>
+        <view class="td">200*200</view>
+        <view class="td">75k以内</view>
+        <view class="td">300</view>
+      </view>
+
+      <view class="tr">
+        <view class="td">列表页</view>
+        <view class="td">200*200</view>
+        <view class="td">75k以内</view>
+        <view class="td">200</view>
+      </view>
+    </view>
+
+    <view class="il-container">
+      <view class="illustration">广告投放说明</view>
+      <view class="illustration-item">1、广告投放周期为1周或1月。</view>
+      <view class="illustration-item">
+        2、先付款并款到账后开始投放广告，广告位置的排期以到款时间为准。
+      </view>
+      <view class="illustration-item">
+        3、广告投放内容必须真实、健康，并符合浏览习惯，且通过我们的审核才可投放。
+      </view>
+      <view class="illustration-item">4、除以上广告位，如有其它位置需求，请与我们进一步联系。</view>
+    </view>
+  </view>
+
+  <view class="co-container">
+    <view class="co-title">合作联系</view>
+    <view class="pnumber">微信号：18819373904</view>
+  </view>
+</view>
+
+<!-- 广告合作页面 -->
+
+<template is="copyright" data="{{time}}" />
+
+<!-- 底部tabBar -->
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<!-- /底部tabBar -->
