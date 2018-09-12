@@ -1,3 +1,24 @@
 <import src="../../templates/tabBar-template/tabBar.wxml" />
-Post
+
+<view>
+  <view class="header">
+    <view class="header-container">
+      <view class='line active'>租房</view>
+      <view>卖房</view>
+      <view>门面</view>
+      <view>跑腿</view>
+      <view>招工</view>
+      <view>二手</view>
+    </view>
+  </view>
+
+  <view class="info-form-container">
+    <view class="upload-img">
+      <view><image></image></view>
+      <view>添加房屋照片</view>
+    </view>
+  </view>
+</view>
+
+
 <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />

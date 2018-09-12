@@ -17,6 +17,7 @@ Page({
     var time = util.formatTime(new Date());
     var rid = options.id;
     var data = renting_data.rentingData[rid];
+    //console.log(data);
     this.setData({
       data:data,
       time:time

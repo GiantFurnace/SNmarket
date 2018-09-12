@@ -1,6 +1,7 @@
 function tabbarinit(){
   return[
     {
+      "tid":0,
       "current":0,
       "pagePath":"/pages/index/index",
       "iconPath":"/images/icon/home.png",
@@ -8,6 +9,7 @@ function tabbarinit(){
       "text":"首页"
     },
     {
+      "tid":1,
       "current": 0,
       "pagePath": "/pages/post/post",
       "iconPath": "/images/icon/send.png",
@@ -15,6 +17,7 @@ function tabbarinit(){
       "text": "发布"
     },
     {
+      "tid":2,
       "current": "0",
       "pagePath": "/pages/index/index",
       "iconPath": "/images/icon/latest.png",
@@ -28,7 +31,7 @@ function tabbarmain(bindName = "tabdata", id, target) {
   var that = target;
   var bindData = {};
   var otabbar = tabbarinit();
-  otabbar[id]['iconPath'] = otabbar[id]['selectedIconPath']//换当前的icon
+  //otabbar[id]['iconPath'] = otabbar[id]['selectedIconPath']//换当前的icon
   otabbar[id]['current'] = 1;
   bindData[bindName] = otabbar;
   that.setData({ bindData });

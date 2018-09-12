@@ -16,6 +16,18 @@ Page({
     tabBar.tabbar("tabBar", 1, this);
   },
 
+  onTabbarTap: function (e) {
+    var tid = e.currentTarget.dataset.tid;
+    //console.log(tid);
+    if (tid == 0) {
+      wx.redirectTo({
+        url: '../index/index',
+      })
+    } else if (tid == 1) {
+      return;
+    }
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

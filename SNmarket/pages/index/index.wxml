@@ -2,11 +2,12 @@
 <import src="../../templates/renting-template/renting.wxml" />
 <import src="../../templates/copyright-template/copyright.wxml" />
 <import src="../../templates/function-template/function.wxml" />
+<import src="../../templates/swiper-template/swiper.wxml" />
 
 <!-- 顶部功能栏 -->
 <view class="top-container">
   <view class="left">
-    <view class="location">广州</view>
+    <view class="location">长铺</view>
     <view>
       <image src="/images/icon/down.png" class="down-icon"></image>
     </view>
@@ -33,37 +34,26 @@
 
     <view class="functions">
       <view>
-        <navigator open-type="navigate" url="../zhaogong/zhaogong">
-          <image src="/images/icon/zhaogong.png" class="icons"></image>
-          <view class="function-txt">招工</view>
-        </navigator>
+        <image src="/images/icon/zhaogong.png" class="icons" bindtap="onFunctionTap" data-fid="3">
+        </image>
+        <view class="function-txt">招工</view>
       </view>
       <view>
-        <navigator open-type="navigate" url="../paotui/paotui">
-          <image src="/images/icon/paotui.png" class="icons"></image>
-          <view class="function-txt">跑腿</view>
-        </navigator>
+        <image src="/images/icon/paotui.png" class="icons" bindtap="onFunctionTap" data-fid="4">
+        </image>
+        <view class="function-txt">跑腿</view>
       </view>
       <view>
-        <navigator open-type="navigate" url="../ershou/ershou">
-          <image src="/images/icon/ershou.png" class="icons"></image>
-          <view class="function-txt">二手</view>
-        </navigator>
+        <image src="/images/icon/ershou.png" class="icons" bindtap="onFunctionTap" data-fid="5">
+        </image>
+        <view class="function-txt">二手</view>
       </view>
     </view>
   </view>
   <!-- /功能列表 -->
 
   <!-- 广告swiper -->
-  <view class="swiper-container">
-    <swiper indicator-dots="{{falses}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{imgUrls}}" wx:key="{{key}}">
-        <swiper-item>
-          <image src="{{item}}" style="width:98%;height:185rpx;"></image>
-        </swiper-item>
-      </block>
-    </swiper>
-  </view>
+    <template is="ad-swiper" data="{{imgUrls}}" />
   <!-- /广告swiper -->
 
   <view class="renting-title">绥宁租房市场动态</view>

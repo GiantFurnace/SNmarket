@@ -1,6 +1,7 @@
 @import "../../templates/tabBar-template/tabBar.wxss";
 @import "../../templates/renting-template/renting.wxss";
 @import "../../templates/copyright-template/copyright.wxss";
+@import "../../templates/swiper-template/swiper.wxss";
 
 .top-container{
   width:96%;
@@ -73,20 +74,11 @@
   text-align:center;
 }
 
-.swiper-container{
-  height:200rpx;
-  margin-left:15rpx;
-  margin-top:30rpx;
-}
-
 .renting-title{
   margin-top:20rpx;
-  margin-left:15rpx;
   font-size:30rpx;
   font-weight:bold;
-  display:flex;
-  flex-direction:row;
-  justify-content:space-around;
+  margin-left:15rpx;
 }
 
  /* 技术服务页面样式 */
