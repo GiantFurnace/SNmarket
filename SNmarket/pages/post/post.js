@@ -1,4 +1,5 @@
 var tabBar = require('../../templates/tabBar-template/tabBar.js');
+var util = require('../../data/copyright-data.js');
 
 Page({
 
@@ -6,14 +7,47 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    
+    objArray:[
+      {
+        index: 0,
+        option: ['长铺', '武阳', '海口'],
+      },
+      {
+        index:0,
+        option: ['全新', '九成新', '八成新', '七成新', '六成新', '五程序'],
+      },
+      {
+        index:0,
+        option: ['汽车', '电子产品']
+      }
+    ],
+    current:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var time = util.formatTime(new Date());
+    this.setData({
+      time:time
+    })
     tabBar.tabbar("tabBar", 1, this);
+  },
+
+  bindPickerChange:function(e){
+    const curindex = e.currentTarget.dataset.current;
+    this.data.objArray[curindex].index = e.detail.value;
+    this.setData({
+      objArray:this.data.objArray
+    })
+  },
+
+  onChangeTap:function(e){
+    this.setData({
+      current:e.currentTarget.dataset.current
+    })
   },
 
   onTabbarTap: function (e) {

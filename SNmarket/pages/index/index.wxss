@@ -78,7 +78,7 @@
   margin-top:20rpx;
   font-size:30rpx;
   font-weight:bold;
-  margin-left:15rpx;
+  margin-left:28rpx;
 }
 
  /* 技术服务页面样式 */

@@ -1,4 +1,4 @@
-var renting_data = require('../../data/renting-data.js');
+var renting_data = require('../../data/app_data.js');
 var util = require('../../data/copyright-data.js');
 
 Page({
@@ -14,6 +14,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+
     var time = util.formatTime(new Date());
     var rid = options.id;
     var data = renting_data.rentingData[rid];

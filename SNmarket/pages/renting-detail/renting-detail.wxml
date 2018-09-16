@@ -26,7 +26,7 @@
   <view class="room-detail">
     <view class="detail">
       <view class="detail-left">
-        <view>面积：{{data.area}}平方</view>
+        <view>面积：{{data.acreage}}平方</view>
         <view>朝向：{{data.position}}</view>
       </view>
       <view class="detail-right">

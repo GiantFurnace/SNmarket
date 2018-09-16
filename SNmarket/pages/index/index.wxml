@@ -7,10 +7,13 @@
 <!-- 顶部功能栏 -->
 <view class="top-container">
   <view class="left">
-    <view class="location">长铺</view>
-    <view>
-      <image src="/images/icon/down.png" class="down-icon"></image>
-    </view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{location}}">
+      <view class="location">{{location[index]}}</view>
+    
+      <view>
+        <image src="/images/icon/down.png" class="down-icon"></image>
+      </view>
+    </picker>
   </view>
 
   <view class="right">

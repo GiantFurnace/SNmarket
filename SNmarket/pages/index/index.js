@@ -1,7 +1,6 @@
 var tabBar = require('../../templates/tabBar-template/tabBar.js');
-var renting_data = require('../../data/renting-data.js');
+var renting_data = require('../../data/app_data.js');
 var util = require('../../data/copyright-data.js');
-var QQMapWX = require('../../data/qqmap-wx-jssdk.js');
 
 Page({
 
@@ -14,7 +13,9 @@ Page({
       "/images/swipers/swiper2.png",
       "/images/swipers/swiper3.png"
     ],
-    current: 0
+    current: 0,
+    index:0,
+    location:['长铺','武阳','海口']
   },
 
   /**
@@ -53,30 +54,37 @@ Page({
   onFunctionTap: function(e) {
     var fid = e.currentTarget.dataset.fid;
     //console.log(fid);
-    if (fid == 0) {
-      wx.navigateTo({
-        url: '../zufang/zufang?id=1',
-      })
-    } else if (fid == 1) {
-      wx.navigateTo({
-        url: '../maifang/maifang',
-      })
-    } else if (fid == 2) {
-      wx.navigateTo({
-        url: '../mengmian/mengmian',
-      })
-    } else if (fid == 3) {
-      wx.navigateTo({
-        url: '../zhaogong/zhaogong',
-      })
-    } else if (fid == 4) {
-      wx.navigateTo({
-        url: '../maifang/maifang',
-      })
-    } else if (fid == 5) {
-      wx.navigateTo({
-        url: '../ershou/ershou',
-      })
+    switch(fid)
+    {
+      case '0':
+        wx.navigateTo({
+          url: '../zufang/zufang?id=1',
+        });
+        break;
+      case '1':
+        wx.navigateTo({
+          url: '../maifang/maifang'
+        });
+        break;
+      case '2':
+        wx.navigateTo({
+          url: '../dianpu/dianpu',
+        });
+      case '3':
+        wx.navigateTo({
+          url: '../zhaogong/zhaogong',
+        });
+        break;
+      case '4':
+        wx.navigateTo({
+          url: '../paotui/paotui',
+        });
+        break;
+      case '5':
+        wx.navigateTo({
+          url: '../ershou/ershou',
+        });
+        break;
     }
 
   },
@@ -91,6 +99,10 @@ Page({
         url: '../post/post',
       })
     }
+  },
+
+  bindPickerChange:function(e){
+    this.setData({ index:e.detail.value })
   },
 
   /**

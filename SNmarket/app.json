@@ -6,11 +6,13 @@
     "pages/renting-detail/renting-detail",
     "pages/zufang/zufang",
     "pages/maifang/maifang",
-    "pages/menmian/menmian",
+    "pages/dianpu/dianpu",
     "pages/zhaogong/zhaogong",
     "pages/paotui/paotui",
-    "pages/ershou/ershou"
-    
+    "pages/ershou/ershou",
+    "pages/sale-detail/sale-detail",
+    "pages/shop-detail/shop-detail",
+    "pages/used-detail/used-detail"
   ],
   "window":{
     "navigationBarBackgroundColor": "#e60a2e"

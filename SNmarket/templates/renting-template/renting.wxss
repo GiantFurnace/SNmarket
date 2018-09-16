@@ -1,4 +1,5 @@
 .renting-container{
+  width:100%;
   display:flex;
   flex-direction:row;
   justify-content:space-around;
@@ -10,11 +11,8 @@
   height:180rpx;
 }
 
-.renting-detail{
-}
-
 .title{
-  font-size:28rpx;
+  font-size:24rpx;
 }
 
 .room-detail{
@@ -30,7 +28,7 @@
 }
 
 .address-detail{
-  font-size:25rpx;
+  font-size:22rpx;
   color:#999;
   margin-top:10rpx;
 }
@@ -45,6 +43,7 @@
   font-size:28rpx;
   color:#e60a2e;
   margin-top:20rpx;
+  line-height:55rpx;
 }
 
 .calling{

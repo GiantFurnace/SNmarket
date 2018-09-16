@@ -1,4 +1,5 @@
 @import "../../templates/tabBar-template/tabBar.wxss";
+@import "../../templates/copyright-template/copyright.wxss";
 
 .header{
   width:100%;
@@ -6,6 +7,14 @@
   flex-direction:column;
   align-items:center;
   
+}
+
+.show{
+  display:block;
+}
+
+.hidden{
+  display:none;
 }
 
 .header-container{
@@ -25,4 +34,102 @@
 
 .active{
   color:#e60a2e;
+}
+
+.info-form-container{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:20rpx;
+}
+
+.upload-img{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  width:95%;
+  font-size:30rpx;
+  border:1px solid #dedede;
+  padding-top:50rpx;
+  padding-bottom:50rpx;
+}
+
+.add-ph-icon{
+  width:100rpx;
+  height:100rpx;
+}
+
+.input, .phone-input{
+  width:95%;
+  margin-top:25rpx;
+}
+
+.input input, .phone-input input{
+  border:1px solid #dedede;
+  padding:10rpx 0 10rpx 20rpx;
+  font-size:24rpx;
+}
+
+.total-price input{
+  width:200rpx;
+  border:1px solid #dedede;
+  margin-right:10rpx;
+}
+
+.detail-txtarea{
+  width:95%;
+  margin-top:20rpx;
+  border:1px solid #dedede;
+}
+
+.detail-txtarea textarea{
+  font-size:24rpx;
+  padding:10rpx 0 0 20rpx;
+}
+
+.room-item{
+  width:100%;
+  margin-top:20rpx;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+}
+
+.room{
+  display:flex;
+  flex-direction:row;
+  font-size:24rpx;
+}
+
+.inputs input{
+  border:1px solid #dedede;
+  margin-right:8rpx;
+  width:60rpx;
+}
+
+.room-txt{
+  margin-right:14rpx;
+  padding-top:8rpx;
+}
+
+.selection{
+ width:92%;
+ color:#999;
+ margin-top:20rpx;
+ font-size:24rpx;
+ border:1px solid #dedede;
+ padding:15rpx 0 15rpx 20rpx;
+}
+
+.submit{
+  margin-top:30rpx;
+  background-color:#e60a2e;
+  width:95%;
+  text-align:center;
+  padding-top:20rpx;
+  padding-bottom:20rpx;
+  color:#fff;
+  font-size:26rpx;
+  margin-bottom:30rpx;
 }
