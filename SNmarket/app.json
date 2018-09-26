@@ -2,7 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/post/post",
-    "pages/latest/latest",
+    "pages/me/me",
     "pages/renting-detail/renting-detail",
     "pages/zufang/zufang",
     "pages/maifang/maifang",
@@ -12,9 +12,14 @@
     "pages/ershou/ershou",
     "pages/sale-detail/sale-detail",
     "pages/shop-detail/shop-detail",
-    "pages/used-detail/used-detail"
+    "pages/used-detail/used-detail",
+    "pages/post/sale-post/sale-post", 
+    "pages/post/shop-post/shop-post",
+    "pages/post/running-post/running-post",
+    "pages/post/wanted-post/wanted-post",
+    "pages/post/used-post/used-post"
   ],
   "window":{
     "navigationBarBackgroundColor": "#e60a2e"
-  }  
+  }
 }

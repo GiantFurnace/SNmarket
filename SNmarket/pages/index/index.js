@@ -14,8 +14,8 @@ Page({
       "/images/swipers/swiper3.png"
     ],
     current: 0,
-    index:0,
-    location:['长铺','武阳','海口']
+    index: 0,
+    location: ['长铺', '武阳', '海口']
   },
 
   /**
@@ -54,34 +54,33 @@ Page({
   onFunctionTap: function(e) {
     var fid = e.currentTarget.dataset.fid;
     //console.log(fid);
-    switch(fid)
-    {
+    switch (fid) {
       case '0':
-        wx.navigateTo({
+        wx.redirectTo({
           url: '../zufang/zufang?id=1',
         });
         break;
       case '1':
-        wx.navigateTo({
+        wx.redirectTo({
           url: '../maifang/maifang'
         });
         break;
       case '2':
-        wx.navigateTo({
+        wx.redirectTo({
           url: '../dianpu/dianpu',
         });
       case '3':
-        wx.navigateTo({
+        wx.redirectTo({
           url: '../zhaogong/zhaogong',
         });
         break;
       case '4':
-        wx.navigateTo({
+        wx.redirectTo({
           url: '../paotui/paotui',
         });
         break;
       case '5':
-        wx.navigateTo({
+        wx.redirectTo({
           url: '../ershou/ershou',
         });
         break;
@@ -89,20 +88,32 @@ Page({
 
   },
 
-  onTabbarTap:function(e){
+  onTabbarTap: function(e) {
     var tid = e.currentTarget.dataset.tid;
     //console.log(tid);
-    if(tid==0){
-      return;
-    }else if(tid==1){
-      wx.redirectTo({
-        url: '../post/post',
-      })
+    switch(tid){
+      case 0:
+        wx.redirectTo({
+          url: '../index/index',
+        })
+        break;
+      case 1:
+        wx.redirectTo({
+          url: '../post/post',
+        })
+        break;
+      case 2:
+        wx.redirectTo({
+          url: '../me/me',
+        })
+        break;
     }
   },
 
-  bindPickerChange:function(e){
-    this.setData({ index:e.detail.value })
+  bindPickerChange: function(e) {
+    this.setData({
+      index: e.detail.value
+    })
   },
 
   /**

@@ -2,9 +2,12 @@
   <view class="tabBar">
     <block wx:for="{{tabBar}}" wx:for-item="item" wx:key="tabBar">
       <view class="tabBar-item">
-        <view bindtap="onTabbarTap" data-tid="{{item.tid}}"><image class="icon" src="{{item.selectedIconPath}}"></image></view>
+        <view bindtap="onTabbarTap" data-tid="{{item.tid}}">
+          <image class="icon" src="{{item.selectedIconPath}}"></image>
+        </view>
         <view class="tabBartext">{{item.text}}</view>
       </view>
+
     </block>
   </view>
 </template>

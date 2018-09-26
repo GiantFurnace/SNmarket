@@ -7,7 +7,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    show:false,
+    selectData:['长铺','武阳','海口'],
+    index:0,
     objArray:[
       {
         index: 0,
@@ -22,7 +24,8 @@ Page({
         option: ['汽车', '电子产品']
       }
     ],
-    current:0
+    current:0,
+    isChoose:false 
   },
 
   /**
@@ -36,30 +39,90 @@ Page({
     tabBar.tabbar("tabBar", 1, this);
   },
 
-  bindPickerChange:function(e){
-    const curindex = e.currentTarget.dataset.current;
-    this.data.objArray[curindex].index = e.detail.value;
+  selectTap(){
     this.setData({
-      objArray:this.data.objArray
+      show:!this.data.show
+    })
+  },
+
+  optionTap(e){
+    let idx = e.currentTarget.dataset.index;
+    this.setData({
+      index:idx,
+      show:!this.data.show
     })
   },
 
   onChangeTap:function(e){
-    this.setData({
-      current:e.currentTarget.dataset.current
-    })
+    let id = e.currentTarget.dataset.current;
+    switch(id){
+      case '0':
+        return;
+        break;
+      case '1':
+        wx.navigateTo({
+          url: '../post/sale-post/sale-post',
+        })
+        break;
+      case '2':
+        wx.navigateTo({
+          url: '../post/shop-post/shop-post',
+        })
+        break;
+      case '3':
+        wx.navigateTo({
+          url: '../post/running-post/running-post',
+        })
+        break;
+      case '4':
+        wx.navigateTo({
+          url: '../post/wanted-post/wanted-post',
+        })
+        break;
+      case '5':
+        wx.navigateTo({
+          url: '../post/used-post/used-post',
+        })
+        break;
+    }
   },
 
   onTabbarTap: function (e) {
     var tid = e.currentTarget.dataset.tid;
     //console.log(tid);
-    if (tid == 0) {
-      wx.redirectTo({
-        url: '../index/index',
-      })
-    } else if (tid == 1) {
-      return;
+    switch (tid) {
+      case 0:
+        wx.redirectTo({
+          url: '../index/index',
+        })
+        break;
+      case 1:
+        return;
+        break;
+      case 2:
+        wx.redirectTo({
+          url: '../me/me',
+        })
+        break;
     }
+  },
+
+  onUploadTap:function(e){
+    let that = this;
+    wx.chooseImage({
+      count:1,
+      sizeType:['original','compressed'],
+      sourceType:['album','camera'],
+      success: function(res) {
+        const img = res.tempFilePaths;
+        that.setData({
+          isChoose:true,
+          imgUrl:img
+        })
+      }
+    })
+
+    
   },
 
   /**

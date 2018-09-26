@@ -1,3 +1,0 @@
-<import src="../../templates/tabBar-template/tabBar.wxml" />
-Latest
-<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
