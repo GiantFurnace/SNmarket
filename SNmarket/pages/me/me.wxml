@@ -1,0 +1,13 @@
+<import src="../../templates/tabBar-template/tabBar.wxml" />
+
+<view class="login-container">
+  <view class="avatar-box">
+    <image src="/images/profile/jb.png" class="avatar"></image>
+  </view>
+  <view class="login-tips">登录后可以发布您的业务详情信息</view>
+  <view class="login-btn">微信登录</view>
+</view>
+
+<!-- 底部tabBar -->
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
+<!-- /底部tabBar -->

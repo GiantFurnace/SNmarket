@@ -1,0 +1,18 @@
+<template name="used">
+  <view class="renting-container">
+    <view bindtap="onUsedDetail" data-eid="{{eid}}"><image src="{{img}}" class="image"></image></view>
+    <view class="renting-detail">
+      <view class="title" bindtap="onUsedDetail" data-eid="{{eid}}">{{title}}</view>
+      <view class="room-detail">
+        <view>物品类型：{{genre}}</view>
+      </view>
+
+      <view class="address-detail">交易地点：{{address}}</view>
+
+      <view class="rent">
+        <view class="money">要价：{{money}}</view>
+        <view class="calling" bindtap="onPhoneCall" data-phone="{{phone}}">打电话</view>
+      </view>
+    </view>
+  </view>
+</template>

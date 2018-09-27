@@ -1,0 +1,3 @@
+<template name="copyright">
+  <view class="copyright">© {{time}} 红炉点雪信息科技工作室 版权所有</view>
+</template>

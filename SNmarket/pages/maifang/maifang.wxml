@@ -1,0 +1,35 @@
+<import src="../../templates/sale-template/sale.wxml" />
+<import src="../../templates/swiper-template/swiper.wxml" />
+<import src="../../templates/copyright-template/copyright.wxml" />
+<import src="../../templates/tabBar-template/tabBar.wxml" />
+
+<view class="mf-container">
+  <view class="header">
+    <view>地区
+      <image src="/images/icon/down.png" class="down-icon"></image>
+    </view>
+
+    <view>户型
+      <image src="/images/icon/down.png" class="down-icon"></image>
+    </view>
+
+    <view>排序
+      <image src="/images/icon/down.png" class="down-icon"></image>
+    </view>
+  </view>
+
+  <block wx:for="{{maifang}}" wx:for-item="item" wx:key="key">
+    <template is="sale" data="{{...item}}" />
+  </block>
+
+  <template is="ad-swiper" data="{{imgUrls}}" />
+
+  <block wx:for="{{maifang}}" wx:for-item="item" wx:key="key">
+    <template is="sale" data="{{...item}}" />
+  </block>
+
+  <template is="copyright" data="{{time}}" />
+
+</view>
+
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />

@@ -1,0 +1,5 @@
+.swiper-container{
+  height:200rpx;
+  margin-left:15rpx;
+  margin-top:30rpx;
+}

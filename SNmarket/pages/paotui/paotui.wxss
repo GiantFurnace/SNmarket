@@ -1,0 +1,4 @@
+@import '../../templates/running-template/running.wxss';
+@import "../../templates/swiper-template/swiper.wxss";
+@import "../../templates/copyright-template/copyright.wxss";
+@import "../../templates/tabBar-template/tabBar.wxss";

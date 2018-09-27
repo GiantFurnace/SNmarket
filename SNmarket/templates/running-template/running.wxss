@@ -1,0 +1,54 @@
+
+.pt-container{
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+.running{
+  width:95%;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  margin-top:50rpx;
+  margin-bottom:30rpx;
+}
+
+.profile{
+  width:100rpx;
+  height:100rpx
+}
+
+.running-detail{
+  
+}
+
+.title{
+  margin-bottom:20rpx;
+  font-size:26rpx;
+}
+
+.employer{
+  display:flex;
+  flex-direction:row;
+  font-size:26rpx;
+  justify-content:space-around;
+}
+
+.employer view{
+  height:50rpx;
+  line-height:50rpx;
+  margin-top:10rpx;
+}
+
+.phone-call{
+  width:120rpx;
+  border:1px solid #dedede;
+  height:50rpx;
+  line-height:50rpx;
+  text-align:center;
+  color:#e60a2e;
+  margin-left:20rpx;
+  border-radius:5px;
+}

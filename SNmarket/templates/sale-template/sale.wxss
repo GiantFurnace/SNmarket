@@ -1,0 +1,64 @@
+.renting-container{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  margin:30rpx 0 50rpx 0;
+}
+
+.image{
+  width:320rpx;
+  height:180rpx;
+}
+
+.renting-detail{
+}
+
+.title{
+  font-size:24rpx;
+}
+
+.room-detail{
+  display:flex;
+  flex-direction:row;
+  font-size:25rpx;
+  color:#999;
+  margin-top:10rpx;
+}
+
+.room-detail view{
+  margin-right:20rpx;
+}
+
+.address-detail{
+  font-size:22rpx;
+  color:#999;
+  margin-top:10rpx;
+}
+
+.rent{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+}
+
+.money, .date{
+  font-size:22rpx;
+  color:#e60a2e;
+  margin-top:20rpx;
+}
+
+.date{
+  color:#999;
+}
+
+.calling{
+  font-size:24rpx;
+  color:#e60a2e;
+  border:1px solid #999;
+  width:120rpx;
+  height:50rpx;
+  text-align:center;
+  line-height:50rpx;
+  border-radius:5px;
+  margin-top:10rpx;
+}

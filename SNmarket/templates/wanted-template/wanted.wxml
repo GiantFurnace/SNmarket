@@ -1,0 +1,12 @@
+<template name="wanted">
+  <view class="wanted">
+    <view><image src="/images/profile/jb.png" class="profile"></image></view>
+    <view class="wanted-detail">
+      <view class="title">{{title}}</view>
+      <view class="employer">
+        <view>{{time}}-{{location}}-{{store}}-{{employer}}</view>
+        <view class="phone-call" data-phone="{{phone}}" bindtap="onPhoneCall">打电话</view>
+      </view>
+    </view>
+  </view>
+</template>

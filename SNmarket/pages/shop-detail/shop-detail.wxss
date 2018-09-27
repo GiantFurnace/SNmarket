@@ -1,0 +1,127 @@
+@import "../../templates/copyright-template/copyright.wxss";
+
+.room-img{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:20rpx;
+  margin-bottom:20rpx;
+}
+
+.room-profile{
+  width:95%;
+  height:275rpx;
+}
+
+.room-title{
+  padding-left:20rpx;
+  margin-bottom:20rpx;
+  font-size:34rpx;
+  font-weight:500;
+}
+
+.room-date-view{
+  font-size:28rpx;
+  color:#999;
+  height:50rpx;
+}
+
+.date{
+  float:left;
+  padding-left:20rpx;
+}
+
+.view{
+  float:right;
+  padding-right:20rpx;
+}
+
+.clear{
+  clear:both;
+}
+
+.room-style-rent{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  margin-top:30rpx;
+}
+
+.style, .rent{
+  font-size: 28rpx;
+  text-align:center;
+}
+
+.highlight{
+  font-size:45rpx;
+  color:#e60a2e;
+}
+
+.room-detail{
+  width:95%;
+  margin-top:30rpx;
+  margin-bottom:30rpx;
+  padding-top:30rpx;
+  padding-bottom:30rpx;
+  border-top:1px solid #dedede;
+  border-bottom:1px solid #dedede;
+  margin-left:20rpx;
+  color:#666;
+}
+
+.detail{
+  display:flex;
+  flex-direction:row;
+}
+
+.detail-left{
+  margin-right:100rpx;
+}
+
+.detail-left, .detail-right, .detail-address{
+  
+  font-size:28rpx;
+  line-height:45rpx;
+}
+
+.room-configuration{
+  line-height:50rpx;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  font-size:28rpx;
+  color:#999;
+  margin-bottom:30rpx;
+
+}
+
+.configuration-title{
+  font-weight:bold;
+  color:#333;
+}
+
+.room-configuration view{
+  width:95%;
+}
+
+.phone-call{
+  width:100%;
+  position:fixed;
+  bottom:0;
+  background-color:#e60a2e;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding-top:15rpx;
+  padding-bottom:15rpx;
+}
+
+.phone-icon{
+  width:45rpx;
+  height:45rpx;
+}
+
+.phone-call view{
+  font-size:24rpx;
+  color:#fff;
+}

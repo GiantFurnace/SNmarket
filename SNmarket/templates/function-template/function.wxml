@@ -1,0 +1,21 @@
+<template name="function">
+  <view class="functions">
+      <view>
+          <image src="/images/icon/zufang.png" class="icons" bindtap="onFunctionTap" data-fid="0">
+          </image>
+          <view class="function-txt">租房</view>
+      </view>
+
+      <view>
+          <image src="/images/icon/maifang.png" class="icons" bindtap="onFunctionTap" data-fid="1">
+          </image>
+          <view class="function-txt">卖房</view>
+      </view>
+
+      <view>
+          <image src="/images/icon/dianpu.png" class="icons" bindtap="onFunctionTap" data-fid="2">
+          </image>
+          <view class="function-txt">店铺</view>
+      </view>
+    </view>
+</template>

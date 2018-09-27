@@ -1,0 +1,12 @@
+<template name="running">
+  <view class="running">
+    <view><image src="/images/profile/jb.png" class="profile"></image></view>
+    <view class="running-detail">
+      <view class="title">{{title}}</view>
+      <view class="employer">
+        <view>{{time}}-{{employer}}-酬金{{reward}}</view>
+        <view class="phone-call" data-phone="{{phone}}" bindtap="onPhoneCall">打电话</view>
+      </view>
+    </view>
+  </view>
+</template>

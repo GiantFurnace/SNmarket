@@ -1,0 +1,16 @@
+<template name="selection">
+  <view class="selection">
+    <view class="select-box">
+      <view class="select" catchtap="selectTap">
+        <text class="select-txt">{{selectData[index]}}</text>
+        <image class="select-img {{show&&'select-img-rotate'}}" src="/images/icon/down.png">
+        </image>
+      </view>
+    </view>
+  </view>
+  <view class="option-box {{!show?'no-border':''}}" style="height:{{show?(selectData.length>3?400:selectData.length*90):0}}rpx;">
+    <text class="option" style="{{index==selectData.length-1&&'border:0;'}}" wx:for="{{selectData}}" wx:key="this" data-index="{{index}}" catchtap="optionTap">
+            {{item}}
+            </text>
+  </view>
+</template>

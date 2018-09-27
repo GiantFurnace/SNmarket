@@ -1,0 +1,17 @@
+@import "../../templates/used-template/used.wxss";
+@import "../../templates/swiper-template/swiper.wxss";
+@import "../../templates/copyright-template/copyright.wxss";
+@import "../../templates/tabBar-template/tabBar.wxss";
+
+.header{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  font-size:34rpx;
+  margin-top:30rpx;
+}
+
+.down-icon{
+  width:25rpx;
+  height:25rpx;
+}

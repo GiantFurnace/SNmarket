@@ -1,0 +1,48 @@
+<import src="../../templates/copyright-template/copyright.wxml" />
+
+<view class="detail-container">
+  <view class="room-img">
+    <image src="/images/one.png" class="room-profile"></image>
+  </view>
+  <view class="room-title">{{data.title}}</view>
+
+  <view class="room-date-view">
+    <view class="date">发布日期：{{data.ymd}}</view>
+    <view class="view">浏览：{{data.view}}</view>
+    <view class="clear"></view>
+  </view>
+
+  <view class="room-style-rent">
+    <view class="style">
+      <view>方式</view>
+      <view class="highlight">{{data.purpose}}</view>
+    </view>
+    <view class="rent">
+      <view>总价</view>
+      <view class="highlight">{{data.totalprice}}元</view>
+    </view>
+  </view>
+
+  <view class="room-detail">
+    <view class="detail">
+      <view class="detail-left">
+        <view>单价：{{data.money}}平方</view>
+        <view>面积：{{data.acreage}}平米</view>
+        <view>类型：{{data.roomtype}}</view>
+      </view>
+    </view>
+    <view class="detail-address">地址：{{data.address}}</view>
+  </view>
+
+  <view class="room-configuration">
+    <view class="configuration-title">商铺详细说明</view>
+    <view>{{data.description}}</view>
+  </view>
+
+  <view class="phone-call" bindtap="onPhoneCall" data-phone="{{data.phone}}">
+    <view><image src="/images/icon/phone-call.png" class="phone-icon"></image></view>
+    <view>咨询</view>
+  </view>
+
+  <template is="copyright" data="{{time}}" />  
+</view>

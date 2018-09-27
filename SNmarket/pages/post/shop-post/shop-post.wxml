@@ -1,0 +1,89 @@
+<import src="../../../templates/selection-template/selection.wxml" />
+
+<!--pages/post/shop-post/shop-post.wxml-->
+<view class="header">
+  <view class="header-container">
+    <view class="{{current==0?'line':''}} {{current==0?'active':''}}" data-current="0" bindtap="onChangeTap">
+      租房
+    </view>
+    <view class="{{current==1?'line':''}} {{current==1?'active':''}}" data-current="1" bindtap="onChangeTap">
+      卖房
+    </view>
+    <view class="{{current==2?'line':''}} {{current==2?'active':''}}" data-current="2" bindtap="onChangeTap">
+      店铺
+    </view>
+    <view class="{{current==3?'line':''}} {{current==3?'active':''}}" data-current="3" bindtap="onChangeTap">
+      跑腿
+    </view>
+    <view class="{{current==4?'line':''}} {{current==4?'active':''}}" data-current="4" bindtap="onChangeTap">
+      招工
+    </view>
+    <view class="{{current==5?'line':''}} {{current==5?'active':''}}" data-current="5" bindtap="onChangeTap">
+      二手
+    </view>
+  </view>
+</view>
+
+<form bindsubmit="formSubmit">
+  <view class="info-form-container">
+    <view class="upload-img">
+      <view>
+        <image src="/images/icon/add-photo.png" class="add-ph-icon"></image>
+      </view>
+      <view>添加店铺照片</view>
+    </view>
+
+    <view class="input">
+      <input placeholder="在此处填标题"></input>
+    </view>
+
+    <view class="detail-txtarea">
+      <textarea placeholder='在此处详细描述你的商铺情况，如转让，售卖，位置信息等'>
+      </textarea>
+    </view>
+
+    <view class="input">
+      <input placeholder="需要描述商铺的地址信息"></input>
+    </view>
+
+    <view class="room-item">
+      <view class="room">
+        <view class="inputs">
+          <input></input>
+        </view>
+        <view class="room-txt">平米</view>
+      </view>
+
+      <view class="room">
+        <view class="inputs">
+          <input></input>
+        </view>
+        <view class="room-txt">元/平米</view>
+      </view>
+
+      <view class="room">
+        <view class="room-txt">总价</view>
+        <view class="total-price">
+          <input></input>
+        </view>
+        <view class="room-txt">万</view>
+      </view>
+    </view>
+
+    <template is="selection" data="{{selectData,index}}" />
+
+    <view class="input">
+      <input placeholder="填写你的称呼方式 如李先生"></input>
+    </view>
+
+    <template is="selection" data="{{selectData,index,show}}" />
+
+    <view class="input">
+      <input placeholder="填写你的号码"></input>
+    </view>
+
+    <view class="submit">
+      <view>保存</view>
+    </view>
+  </view>
+</form>
