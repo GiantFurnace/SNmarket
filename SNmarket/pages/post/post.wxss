@@ -2,141 +2,142 @@
 @import "../../templates/copyright-template/copyright.wxss";
 @import "../../templates/selection-template/selection.wxss";
 
-.header{
-  width:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.show{
-  display:block;
+.show {
+  display: block;
 }
 
-.hidden{
-  display:none;
+.hidden {
+  display: none;
 }
 
-.header-container{
-  width:95%;
-  display:flex;
-  flex-direction:row;
-  justify-content:space-around;
-  border-bottom:1px solid #dedede;
-  padding-top:15rpx;
-  font-size:28rpx;
+.header-container {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: 1px solid #dedede;
+  padding-top: 15rpx;
+  font-size: 28rpx;
 }
 
-.line{
-  padding-bottom:15rpx;
-  border-bottom:2px solid #e60a2e;
+.line {
+  padding-bottom: 15rpx;
+  border-bottom: 2px solid #e60a2e;
 }
 
-.active{
-  color:#e60a2e;
+.active {
+  color: #e60a2e;
 }
 
-.info-form-container{
-  width:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  margin-top:20rpx;
+.info-form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20rpx;
 }
 
-.upload-img{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  width:95%;
-  font-size:30rpx;
-  border:1px solid #dedede;
-
+.upload-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+  font-size: 30rpx;
+  border: 1px solid #dedede;
 }
 
-.add-img{
-  text-align:center;
-  margin-top:50rpx;
-  margin-bottom:50rpx;
-  font-size:30rpx;
+.add-img {
+  text-align: center;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  font-size: 24rpx;
 }
 
-.uploaded-img{
-  width:576rpx;
-  height:150rpx;
+.uploaded-img {
+  width:700rpx;
+  height:250rpx;
+  margin-top: 15rpx;
+  margin-bottom: 10rpx;
 }
 
-.add-ph-icon{
-  width:100rpx;
-  height:100rpx;
+.add-ph-icon {
+  width: 100rpx;
+  height: 100rpx;
 }
 
-.input, .phone-input{
-  width:95%;
-  margin-top:25rpx;
+.input, .phone-input {
+  width: 95%;
+  margin-top: 25rpx;
 }
 
-.input input, .phone-input input{
-  border:1px solid #dedede;
-  padding:10rpx 0 10rpx 20rpx;
-  font-size:24rpx;
+.input input, .phone-input input {
+  border: 1px solid #dedede;
+  padding: 10rpx 0 10rpx 20rpx;
+  font-size: 24rpx;
 }
 
-.total-price input{
-  width:200rpx;
-  border:1px solid #dedede;
-  margin-right:10rpx;
+.total-price input {
+  width: 200rpx;
+  border: 1px solid #dedede;
+  margin-right: 10rpx;
 }
 
-.detail-txtarea{
-  width:95%;
-  margin-top:20rpx;
-  border:1px solid #dedede;
+.detail-txtarea {
+  width: 95%;
+  margin-top: 20rpx;
+  border: 1px solid #dedede;
 }
 
-.detail-txtarea textarea{
-  font-size:24rpx;
-  padding:10rpx 0 0 20rpx;
+.detail-txtarea textarea {
+  font-size: 24rpx;
+  padding: 10rpx 0 0 20rpx;
 }
 
-.room-item{
-  width:100%;
-  margin-top:20rpx;
-  display:flex;
-  flex-direction:row;
-  justify-content:space-around;
+.room-item {
+  width: 100%;
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.room{
-  display:flex;
-  flex-direction:row;
-  font-size:24rpx;
+.room {
+  display: flex;
+  flex-direction: row;
+  font-size: 24rpx;
 }
 
-.inputs input{
-  border:1px solid #dedede;
-  margin-right:8rpx;
-  width:60rpx;
+.inputs input {
+  border: 1px solid #dedede;
+  margin-right: 8rpx;
+  width: 60rpx;
 }
 
-.property-txt{
-  padding-top:8rpx;
+.property-txt {
+  padding-top: 8rpx;
 }
 
-.room-txt{
-  margin-right:14rpx;
-  padding-top:8rpx;
+.room-txt {
+  margin-right: 14rpx;
+  padding-top: 8rpx;
 }
 
-.submit{
-  margin-top:30rpx;
-  background-color:#e60a2e;
-  width:95%;
-  text-align:center;
-  padding-top:20rpx;
-  padding-bottom:20rpx;
-  color:#fff;
+.submit {
+  margin-top: 30rpx;
+  width: 95%;
+  margin-bottom: 30rpx;
+}
+
+.submit-btn{
   font-size:26rpx;
-  margin-bottom:30rpx;
+  background:#e60a2e;
+  padding:15rpx 0 15rpx 0;
+  color:#fff;
 }

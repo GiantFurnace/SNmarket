@@ -34,43 +34,46 @@
             <view>
               <image src="/images/icon/add-photo.png" class="add-ph-icon"></image>
             </view>
-            <view>添加房屋照片</view>
+            <view>添加房屋照片(350px*125px)</view>
           </view>
 
-          <view class="{{isChoose?'show':'hidden'}}"><image src="{{imgUrl}}" class="uploaded-img "></image></view>
+          <view class="{{isChoose?'show':'hidden'}}">
+            <input class="hidden" name="uploadImg" value="{{imgUrl}}"></input>
+            <image src="{{imgUrl}}" class="uploaded-img "></image>
+          </view>
         </view>
 
         <view class="input">
-          <input placeholder="在此处填写你要出租的房产标题"></input>
+          <input placeholder="在此处填写你要出租的房产标题" name="title"></input>
         </view>
 
         <view class="detail-txtarea">
-          <textarea placeholder='在此处详细描述你要出租的房产信息，如楼层，新旧程度，房屋配置情况等'>
+          <textarea placeholder='在此处详细描述你要出租的房产信息，如楼层，新旧程度，房屋配置情况等' name="detail">
           </textarea>
         </view>
 
         <view class="input">
-          <input placeholder="需要描述房屋的地址信息"></input>
+          <input placeholder="需要描述房屋的地址信息" name="address"></input>
         </view>
 
         <view class="room-item">
           <view class="room">
             <view class="inputs">
-              <input></input>
+              <input name="room"></input>
             </view>
             <view class="room-txt">室</view>
           </view>
 
           <view class="room">
             <view class="inputs">
-              <input></input>
+              <input name="acreage"></input>
             </view>
             <view class="room-txt">平米</view>
           </view>
 
           <view class="room">
             <view class="inputs">
-              <input></input>
+              <input name="money"></input>
             </view>
             <view class="room-txt">元/月</view>
           </view>
@@ -82,31 +85,32 @@
             </view>
             <view class="room-txt">付</view>
             <view class="inputs">
-              <input></input>
+              <input name="pay"></input>
             </view>
           </view>
         </view>
 
         <view class="input">
-          <input placeholder="填写房子朝向，如东，南，西，北"></input>
+          <input placeholder="填写房子朝向，如东，南，西，北" name="position"></input>
         </view>
 
         <view class="input">
-          <input placeholder="填写楼层信息，如4/9，表示楼房9层的第4层"></input>
+          <input placeholder="填写楼层信息，如4/9，表示楼房9层的第4层" name="floor"></input>
         </view>
 
+        <input class="hidden" value="{{selectData[index]}}" name="selection"></input>
         <template is="selection" data="{{selectData,index,show}}" />
 
         <view class="input">
-          <input placeholder="填写你的称呼方式，如李先生"></input>
+          <input placeholder="填写你的称呼方式，如李先生" name="name"></input>
         </view>
 
         <view class="input">
-          <input placeholder="填写你的号码"></input>
+          <input placeholder="填写你的号码" name="phone"></input>
         </view>
 
         <view class="submit">
-          <view>保存</view>
+          <button form-type="submit" class="submit-btn">保存</button>
         </view>
       </view>
     </form>

@@ -5,6 +5,8 @@
     <image src="/images/profile/jb.png" class="avatar"></image>
   </view>
   <view class="login-tips">登录后可以发布您的业务详情信息</view>
+  <view class="login-tips">抱歉，功能未开放:(</view>
+  <view class="login-tips">请以游客身份发布信息:)</view>
   <view class="login-btn">微信登录</view>
 </view>
 

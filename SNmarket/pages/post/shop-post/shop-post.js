@@ -8,7 +8,8 @@ Page({
     current:2,
     show: false,
     index: 0,
-    selectData: ['长铺', '武阳', '海口']
+    selectData: ['长铺', '武阳', '海口'],
+    isChoose:false
   },
 
   /**
@@ -64,6 +65,22 @@ Page({
         break;
     }
 
+  },
+
+  onUploadTap: function (e) {
+    let that = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album'],
+      success: function (res) {
+        const img = res.tempFilePaths;
+        that.setData({
+          isChoose: true,
+          imgUrl: img
+        })
+      }
+    })
   },
 
   /**

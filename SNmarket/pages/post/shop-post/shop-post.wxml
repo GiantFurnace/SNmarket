@@ -26,12 +26,16 @@
 
 <form bindsubmit="formSubmit">
   <view class="info-form-container">
-    <view class="upload-img">
-      <view>
-        <image src="/images/icon/add-photo.png" class="add-ph-icon"></image>
-      </view>
-      <view>添加店铺照片</view>
-    </view>
+    <view class="upload-img" bindtap="onUploadTap">
+          <view class="add-img {{isChoose?'hidden':'show'}}">
+            <view>
+              <image src="/images/icon/add-photo.png" class="add-ph-icon"></image>
+            </view>
+            <view>添加店铺照片(350px*125px)</view>
+          </view>
+
+          <view class="{{isChoose?'show':'hidden'}}"><image src="{{imgUrl}}" class="uploaded-img "></image></view>
+        </view>
 
     <view class="input">
       <input placeholder="在此处填标题"></input>

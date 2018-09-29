@@ -19,14 +19,16 @@
 .login-tips{
   font-size:28rpx;
   margin-top:50rpx;
+  color:#999;
 }
 
 .login-btn{
   width:250rpx;
-  border:1px solid #e60a2e;
+  border:2px solid #999;
   border-radius:10px;
   margin-top:50rpx;
   padding:15rpx;
   text-align:center;
   font-size:28rpx;
+  color:#999;
 }

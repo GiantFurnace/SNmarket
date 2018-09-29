@@ -112,7 +112,7 @@ Page({
     wx.chooseImage({
       count:1,
       sizeType:['original','compressed'],
-      sourceType:['album','camera'],
+      sourceType:['album'],
       success: function(res) {
         const img = res.tempFilePaths;
         that.setData({
@@ -121,8 +121,10 @@ Page({
         })
       }
     })
+  },
 
-    
+  formSubmit:function(e){
+    console.log(e.detail.value);
   },
 
   /**

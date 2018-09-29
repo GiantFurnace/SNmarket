@@ -73,6 +73,22 @@ Page({
 
   },
 
+  onUploadTap: function (e) {
+    let that = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album'],
+      success: function (res) {
+        const img = res.tempFilePaths;
+        that.setData({
+          isChoose: true,
+          imgUrl: img
+        })
+      }
+    })
+  },
+
   /**
    * 生命周期函数--监听页面显示
    */

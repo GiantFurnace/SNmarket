@@ -121,6 +121,8 @@ Page({
    */
   onReady: function() {
 
+
+    //console.log(todos);
   },
 
   /**

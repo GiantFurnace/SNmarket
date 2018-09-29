@@ -20,6 +20,7 @@ Page({
         option: ['汽车', '电子产品']
       }
     ],
+    isChoose:false
   },
 
   /**
@@ -27,6 +28,22 @@ Page({
    */
   onLoad: function (options) {
 
+  },
+
+  onUploadTap: function (e) {
+    let that = this;
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album'],
+      success: function (res) {
+        const img = res.tempFilePaths;
+        that.setData({
+          isChoose: true,
+          imgUrl: img
+        })
+      }
+    })
   },
 
   onChangeTap: function (e) {
