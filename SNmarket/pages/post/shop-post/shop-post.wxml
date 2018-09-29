@@ -34,33 +34,36 @@
             <view>添加店铺照片(350px*125px)</view>
           </view>
 
-          <view class="{{isChoose?'show':'hidden'}}"><image src="{{imgUrl}}" class="uploaded-img "></image></view>
+          <view class="{{isChoose?'show':'hidden'}}">
+            <input class="hidden" name="uploadedImg" value="{{imgUrl}}"></input>
+            <image src="{{imgUrl}}" class="uploaded-img "></image>
+          </view>
         </view>
 
     <view class="input">
-      <input placeholder="在此处填标题"></input>
+      <input placeholder="在此处填标题" name="title"></input>
     </view>
 
     <view class="detail-txtarea">
-      <textarea placeholder='在此处详细描述你的商铺情况，如转让，售卖，位置信息等'>
+      <textarea placeholder='在此处详细描述你的商铺情况，如转让，售卖，位置信息等' name="detail">
       </textarea>
     </view>
 
     <view class="input">
-      <input placeholder="需要描述商铺的地址信息"></input>
+      <input placeholder="需要描述商铺的地址信息" name="address"></input>
     </view>
 
     <view class="room-item">
       <view class="room">
         <view class="inputs">
-          <input></input>
+          <input name="acreage"></input>
         </view>
         <view class="room-txt">平米</view>
       </view>
 
       <view class="room">
         <view class="inputs">
-          <input></input>
+          <input name="money"></input>
         </view>
         <view class="room-txt">元/平米</view>
       </view>
@@ -68,26 +71,25 @@
       <view class="room">
         <view class="room-txt">总价</view>
         <view class="total-price">
-          <input></input>
+          <input name="price"></input>
         </view>
         <view class="room-txt">万</view>
       </view>
     </view>
 
-    <template is="selection" data="{{selectData,index}}" />
-
     <view class="input">
-      <input placeholder="填写你的称呼方式 如李先生"></input>
+      <input placeholder="填写你的称呼方式 如李先生" name="name"></input>
     </view>
 
+    <input class="hidden" name="selection" value="{{selectData[index]}}"></input>
     <template is="selection" data="{{selectData,index,show}}" />
 
     <view class="input">
-      <input placeholder="填写你的号码"></input>
+      <input placeholder="填写你的号码" name="phone"></input>
     </view>
 
     <view class="submit">
-      <view>保存</view>
+      <button form-type="submit" class="submit-btn">发布</button>
     </view>
   </view>
 </form>

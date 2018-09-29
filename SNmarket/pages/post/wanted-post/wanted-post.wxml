@@ -49,7 +49,7 @@
         </view>
 
         <view class="submit">
-          <view>保存</view>
+          <button form-type="submit" class="submit-btn">发布</button>
         </view>
       </view>
     </form>

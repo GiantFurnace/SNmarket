@@ -33,7 +33,10 @@
             <view>添加房屋照片(350px*125px)</view>
           </view>
 
-          <view class="{{isChoose?'show':'hidden'}}"><image src="{{imgUrl}}" class="uploaded-img "></image></view>
+          <view class="{{isChoose?'show':'hidden'}}">
+            <input class="hidden" name="uploadImg" value="{{imgUrl}}"></input>          
+            <image src="{{imgUrl}}" class="uploaded-img "></image>
+          </view>
         </view>
 
     <view class="input">
@@ -95,7 +98,7 @@
     </view>
 
     <view class="submit">
-      <view>保存</view>
+      <button form-type="submit" class="submit-btn">发布</button>
     </view>
   </view>
 </form>

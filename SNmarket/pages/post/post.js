@@ -124,7 +124,20 @@ Page({
   },
 
   formSubmit:function(e){
-    console.log(e.detail.value);
+    wx.showModal({
+      title: '发布',
+      content: '确认发布吗？',
+      success:res=>{
+        if(res.confirm){
+          wx.showToast({
+            title: '发布成功:)',
+            success: res => {
+              console.log(e.detail.value);
+            }
+          })
+        }
+      }
+    })
   },
 
   /**

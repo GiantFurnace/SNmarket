@@ -110,7 +110,7 @@
         </view>
 
         <view class="submit">
-          <button form-type="submit" class="submit-btn">保存</button>
+          <button form-type="submit" class="submit-btn">发布</button>
         </view>
       </view>
     </form>

@@ -27,30 +27,31 @@
   <view class="info-form-container">
 
     <view class="input">
-      <input placeholder="填写标题"></input>
+      <input placeholder="填写标题" name="title"></input>
     </view>
 
     <view class="detail-txtarea">
-      <textarea placeholder='详细描写你要别人帮你跑腿代办的事情'>
+      <textarea placeholder='详细描写你要别人帮你跑腿代办的事情' name="detail">
       </textarea>
     </view>
 
     <view class="input">
-      <input placeholder="填写你的称呼方式 如李先生"></input>
+      <input placeholder="填写你的称呼方式 如李先生" name="name"></input>
     </view>
 
     <view class="input">
-      <input placeholder="填写你希望支付的酬金(元)"></input>
+      <input placeholder="填写你希望支付的酬金(元)" name="money"></input>
     </view>
 
+    <input class="hidden" name="selection" value="{{selectData[index]}}"></input>
     <template is="selection" data="{{selectData,index,show}}" />
 
     <view class="input">
-      <input placeholder="填写你的电话号码"></input>
+      <input placeholder="填写你的电话号码" name="phone"></input>
     </view>
 
     <view class="submit">
-      <view>保存</view>
+      <button form-type="submit" class="submit-btn">发布</button>
     </view>
   </view>
 </form>
