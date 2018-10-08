@@ -81,7 +81,7 @@ class UploadHandler(BaseHandler):
 
     @tornado.web.asynchronous
     def options(self):
-        self.finish({"code":nana.ok})
+        self.finish({"code":Nana.ok})
 
 
 
