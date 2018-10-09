@@ -1,6 +1,6 @@
 var tabBar = require('../../templates/tabBar-template/tabBar.js');
 var util = require('../../data/copyright-data.js');
-
+const app = getApp();
 Page({
 
   /**
@@ -55,56 +55,13 @@ Page({
 
   onChangeTap:function(e){
     let id = e.currentTarget.dataset.current;
-    switch(id){
-      case '0':
-        return;
-        break;
-      case '1':
-        wx.navigateTo({
-          url: '../post/sale-post/sale-post',
-        })
-        break;
-      case '2':
-        wx.navigateTo({
-          url: '../post/shop-post/shop-post',
-        })
-        break;
-      case '3':
-        wx.navigateTo({
-          url: '../post/running-post/running-post',
-        })
-        break;
-      case '4':
-        wx.navigateTo({
-          url: '../post/wanted-post/wanted-post',
-        })
-        break;
-      case '5':
-        wx.navigateTo({
-          url: '../post/used-post/used-post',
-        })
-        break;
-    }
+    app.onChangeTap(id);
   },
 
   onTabbarTap: function (e) {
     var tid = e.currentTarget.dataset.tid;
-    //console.log(tid);
-    switch (tid) {
-      case 0:
-        wx.redirectTo({
-          url: '../index/index',
-        })
-        break;
-      case 1:
-        return;
-        break;
-      case 2:
-        wx.redirectTo({
-          url: '../me/me',
-        })
-        break;
-    }
+    var key = 1;
+    app.onTabbarTap(tid,key);
   },
 
   onUploadTap:function(e){

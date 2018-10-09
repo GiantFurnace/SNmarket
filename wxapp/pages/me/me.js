@@ -1,5 +1,5 @@
 var tabBar = require('../../templates/tabBar-template/tabBar.js');
-
+const app = getApp();
 Page({
 
   /**
@@ -18,22 +18,8 @@ Page({
 
   onTabbarTap: function (e) {
     var tid = e.currentTarget.dataset.tid;
-    //console.log(tid);
-    switch (tid) {
-      case 0:
-        wx.redirectTo({
-          url: '../index/index',
-        })
-        break;
-      case 1:
-        wx.redirectTo({
-          url: '../post/post',
-        })
-        break;
-      case 2:
-        return;
-        break;
-    }
+    var key = 2;
+    app.onTabbarTap(tid,key);
   },
 
   /**

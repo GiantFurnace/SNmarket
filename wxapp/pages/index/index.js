@@ -1,6 +1,7 @@
 var tabBar = require('../../templates/tabBar-template/tabBar.js');
 var renting_data = require('../../data/app_data.js');
 var util = require('../../data/copyright-data.js');
+const app = getApp();
 
 Page({
 
@@ -54,60 +55,14 @@ Page({
   onFunctionTap: function(e) {
     var fid = e.currentTarget.dataset.fid;
     //console.log(fid);
-    switch (fid) {
-      case '0':
-        wx.redirectTo({
-          url: '../zufang/zufang?id=1',
-        });
-        break;
-      case '1':
-        wx.redirectTo({
-          url: '../maifang/maifang'
-        });
-        break;
-      case '2':
-        wx.redirectTo({
-          url: '../dianpu/dianpu',
-        });
-      case '3':
-        wx.redirectTo({
-          url: '../zhaogong/zhaogong',
-        });
-        break;
-      case '4':
-        wx.redirectTo({
-          url: '../paotui/paotui',
-        });
-        break;
-      case '5':
-        wx.redirectTo({
-          url: '../ershou/ershou',
-        });
-        break;
-    }
+    app.onFunctionTap(fid);
 
   },
 
   onTabbarTap: function(e) {
     var tid = e.currentTarget.dataset.tid;
-    //console.log(tid);
-    switch(tid){
-      case 0:
-        wx.redirectTo({
-          url: '../index/index',
-        })
-        break;
-      case 1:
-        wx.redirectTo({
-          url: '../post/post',
-        })
-        break;
-      case 2:
-        wx.redirectTo({
-          url: '../me/me',
-        })
-        break;
-    }
+    var key = 0;
+    app.onTabbarTap(tid,key);
   },
 
   bindPickerChange: function(e) {
