@@ -38,18 +38,18 @@
     </view>
 
     <view class="input">
-      <input placeholder="填写你的称呼方式 如李先生" name="name"></input>
+      <input placeholder="填写你的称呼方式 如李先生" name="publisher"></input>
     </view>
 
     <view class="input">
-      <input placeholder="填写你希望支付的酬金(元)" name="money"></input>
+      <input placeholder="填写你希望支付的酬金(元)" name="price"></input>
     </view>
 
-    <input class="hidden" name="selection" value="{{selectData[index]}}"></input>
+    <input class="hidden" name="zone" value="{{selectData[index]}}"></input>
     <template is="selection" data="{{selectData,index,show}}" />
 
     <view class="input">
-      <input placeholder="填写你的电话号码" name="phone"></input>
+      <input placeholder="填写你的电话号码" name="telephone"></input>
     </view>
 
     <view class="submit">

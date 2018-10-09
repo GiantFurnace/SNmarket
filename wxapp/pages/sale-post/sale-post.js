@@ -25,6 +25,11 @@ Page({
     tabBar.tabbar("tabBar", 1, this);
   },
 
+  formSubmit: function (e) {
+    var val = e.detail.value;
+    app.onSubmitTap(val);
+  },
+
   selectTap(){
     this.setData({
       show:!this.data.show
@@ -41,8 +46,8 @@ Page({
 
   onChangeTap: function (e) {
     let id = e.currentTarget.dataset.current;
-    //console.log(id);
-    app.onChangeTap(id);
+    let key = 1;
+    app.onChangeTap(id,key);
   },
 
   onTabbarTap: function (e) {

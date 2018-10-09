@@ -40,26 +40,14 @@ Page({
 
   onChangeTap: function (e) {
     let id = e.currentTarget.dataset.current;
-    //console.log(id);
-    app.onChangeTap(id);
+    let key = 4;
+    app.onChangeTap(id,key);
 
   },
 
   formSubmit: function (e) {
-    wx.showModal({
-      title: '发布',
-      content: '确认发布吗？',
-      success: res => {
-        if (res.confirm) {
-          wx.showToast({
-            title: '发布成功:)',
-            success: res => {
-              console.log(e.detail.value);
-            }
-          })
-        }
-      }
-    })
+    var val = e.detail.value;
+    app.onSubmitTap(val);
   },
 
   /**

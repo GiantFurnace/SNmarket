@@ -35,7 +35,7 @@
       </view>
 
       <view class="{{isChoose?'show':'hidden'}}">
-        <input class="hidden" value="{{imgUrl}}" name="uploadedImg"></input>
+        <input class="hidden" value="{{imgUrl}}" name="thumb"></input>
         <image src="{{imgUrl}}" class="uploaded-img "></image>
       </view>
     </view>
@@ -57,7 +57,7 @@
       <input placeholder="填写你的出售价格" name="price"></input>
     </view>
 
-    <input class="hidden" name="selection" value="{{selections}}"></input>
+    <input class="hidden" name="zone" value="{{selections}}"></input>
     <view class="selection" wx:for="{{objArray}}" wx:for-item="item" wx:key="key" wx:for-index="idx">
 
       <picker bindchange="bindPickerChange" value="{{item.index}}" range="{{item.option}}" data-current="{{idx}}">
@@ -73,11 +73,11 @@
     </view>
 
     <view class="input">
-      <input placeholder="填写你的称呼方式，如李先生" name="name"></input>
+      <input placeholder="填写你的称呼方式，如李先生" name="publisher"></input>
     </view>
 
     <view class="input">
-      <input placeholder="填写你的号码" name="phone"></input>
+      <input placeholder="填写你的号码" name="telephone"></input>
     </view>
 
     <view class="submit">

@@ -29,25 +29,26 @@
   <view class="info-form-container">
 
     <view class="input">
-      <input placeholder="填写你的招工标题，如宾馆招洗碗工月薪2000"></input>
+      <input placeholder="填写你的招工标题，如宾馆招洗碗工月薪2000" name="price"></input>
     </view>
 
     <view class="input">
-      <input placeholder="填写工作地点，如绥宁绿洲宾馆"></input>
+      <input placeholder="填写工作地点，如绥宁绿洲宾馆" name="address"></input>
     </view>
 
     <view class="input">
-      <input placeholder="填写你的称呼方式 如李先生"></input>
+      <input placeholder="填写你的称呼方式 如李先生" name="publisher"></input>
     </view>
 
     <view class="input">
-      <input placeholder="填写该工作岗位的薪水(月薪)"></input>
+      <input placeholder="填写该工作岗位的薪水(月薪)" name="salary"></input>
     </view>
 
+    <input class="hidden" name="zone" value="{{selectData[index]}}"></input>
     <template is="selection" data="{{selectData,index,show}}" />
 
     <view class="input">
-      <input placeholder="填写你的电话号码"></input>
+      <input placeholder="填写你的电话号码" name="telephone"></input>
     </view>
 
     <view class="submit">

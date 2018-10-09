@@ -32,10 +32,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //获取版权时间和当前时间
     var time = util.formatTime(new Date());
+
+    //数据绑定到页面
     this.setData({
-      time:time
+      time:time,
     })
+
+    //tabbar切换功能
     tabBar.tabbar("tabBar", 1, this);
   },
 
@@ -55,7 +60,8 @@ Page({
 
   onChangeTap:function(e){
     let id = e.currentTarget.dataset.current;
-    app.onChangeTap(id);
+    let key = 0;
+    app.onChangeTap(id,key);
   },
 
   onTabbarTap: function (e) {
@@ -81,27 +87,15 @@ Page({
   },
 
   formSubmit:function(e){
-    wx.showModal({
-      title: '发布',
-      content: '确认发布吗？',
-      success:res=>{
-        if(res.confirm){
-          wx.showToast({
-            title: '发布成功:)',
-            success: res => {
-              console.log(e.detail.value);
-            }
-          })
-        }
-      }
-    })
+    var val = e.detail.value;
+    app.onSubmitTap(val);
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+   
   },
 
   /**

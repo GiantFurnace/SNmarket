@@ -36,43 +36,43 @@
           </view>
 
           <view class="{{isChoose?'show':'hidden'}}">
-            <input class="hidden" name="uploadImg" value="{{imgUrl}}"></input>          
+            <input class="hidden" name="thumb" value="{{imgUrl}}"></input>          
             <image src="{{imgUrl}}" class="uploaded-img "></image>
           </view>
         </view>
 
     <view class="input">
-      <input placeholder="在此处填标题"></input>
+      <input placeholder="在此处填标题" name="title"></input>
     </view>
 
     <view class="detail-txtarea">
-      <textarea placeholder='在此处详细描述你的房产信息，如产权，地理位置信息等'>
+      <textarea placeholder='在此处详细描述你的房产信息，如产权，地理位置信息等' name="detail">
       </textarea>
     </view>
 
     <view class="input">
-      <input placeholder="需要描述房产的地址信息"></input>
+      <input placeholder="需要描述房产的地址信息" name="address"></input>
     </view>
 
     <view class="room-item">
       <view class="room">
         <view class="property-txt">产权</view>
         <view class="inputs">
-          <input></input>
+          <input name="property"></input>
         </view>
         <view class="room-txt">年</view>
       </view>
 
       <view class="room">
         <view class="inputs">
-          <input></input>
+          <input name="area"></input>
         </view>
         <view class="room-txt">平米</view>
       </view>
 
       <view class="room">
         <view class="inputs">
-          <input></input>
+          <input name="price"></input>
         </view>
         <view class="room-txt">元/平米</view>
       </view>
@@ -80,11 +80,11 @@
       <view class="room">
         <view class="room-txt">室</view>
         <view class="inputs">
-          <input></input>
+          <input name="bedroom"></input>
         </view>
         <view class="room-txt">厅</view>
         <view class="inputs">
-          <input></input>
+          <input name="drawing_room"></input>
         </view>
       </view>
     </view>
@@ -92,11 +92,11 @@
     <template is="selection" data="{{selectData,index,show}}" />
 
     <view class="input">
-      <input placeholder="填写你的称呼方式 如李先生"></input>
+      <input placeholder="填写你的称呼方式 如李先生" name="publisher"></input>
     </view>
 
     <view class="input">
-      <input placeholder="填写你的号码"></input>
+      <input placeholder="填写你的号码" name="telephone"></input>
     </view>
 
     <view class="submit">

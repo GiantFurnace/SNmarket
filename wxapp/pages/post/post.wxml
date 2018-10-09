@@ -38,7 +38,7 @@
           </view>
 
           <view class="{{isChoose?'show':'hidden'}}">
-            <input class="hidden" name="uploadImg" value="{{imgUrl}}"></input>
+            <input class="hidden" name="thumb" value="{{imgUrl}}"></input>
             <image src="{{imgUrl}}" class="uploaded-img "></image>
           </view>
         </view>
@@ -59,21 +59,21 @@
         <view class="room-item">
           <view class="room">
             <view class="inputs">
-              <input name="room"></input>
+              <input name="bedroom"></input>
             </view>
             <view class="room-txt">室</view>
           </view>
 
           <view class="room">
             <view class="inputs">
-              <input name="acreage"></input>
+              <input name="area"></input>
             </view>
             <view class="room-txt">平米</view>
           </view>
 
           <view class="room">
             <view class="inputs">
-              <input name="money"></input>
+              <input name="price"></input>
             </view>
             <view class="room-txt">元/月</view>
           </view>
@@ -81,7 +81,7 @@
           <view class="room">
             <view class="room-txt">押</view>
             <view class="inputs">
-              <input></input>
+              <input name="deposit"></input>
             </view>
             <view class="room-txt">付</view>
             <view class="inputs">
@@ -98,15 +98,16 @@
           <input placeholder="填写楼层信息，如4/9，表示楼房9层的第4层" name="floor"></input>
         </view>
 
-        <input class="hidden" value="{{selectData[index]}}" name="selection"></input>
+        <input class="hidden" value="{{selectData[index]}}" name="zone"></input>
         <template is="selection" data="{{selectData,index,show}}" />
 
         <view class="input">
-          <input placeholder="填写你的称呼方式，如李先生" name="name"></input>
+          <input placeholder="填写你的称呼方式，如李先生" name="publisher"></input>
         </view>
 
         <view class="input">
-          <input placeholder="填写你的号码" name="phone"></input>
+          <input placeholder="填写你的号码" name="telephone"></input>
+          <input value="{{time}}"></input>
         </view>
 
         <view class="submit">
