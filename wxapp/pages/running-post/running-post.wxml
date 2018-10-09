@@ -1,0 +1,62 @@
+<import src="../../templates/selection-template/selection.wxml" />
+<import src="../../templates/tabBar-template/tabBar.wxml" />
+<import src="../../templates/copyright-template/copyright.wxml" />
+
+<view class="header">
+  <view class="header-container">
+    <view class="{{current==0?'line':''}} {{current==0?'active':''}}" data-current="0" bindtap="onChangeTap">
+      租房
+    </view>
+    <view class="{{current==1?'line':''}} {{current==1?'active':''}}" data-current="1" bindtap="onChangeTap">
+      卖房
+    </view>
+    <view class="{{current==2?'line':''}} {{current==2?'active':''}}" data-current="2" bindtap="onChangeTap">
+      店铺
+    </view>
+    <view class="{{current==3?'line':''}} {{current==3?'active':''}}" data-current="3" bindtap="onChangeTap">
+      跑腿
+    </view>
+    <view class="{{current==4?'line':''}} {{current==4?'active':''}}" data-current="4" bindtap="onChangeTap">
+      招工
+    </view>
+    <view class="{{current==5?'line':''}} {{current==5?'active':''}}" data-current="5" bindtap="onChangeTap">
+      二手
+    </view>
+  </view>
+</view>
+
+<form bindsubmit="formSubmit">
+  <view class="info-form-container">
+
+    <view class="input">
+      <input placeholder="填写标题" name="title"></input>
+    </view>
+
+    <view class="detail-txtarea">
+      <textarea placeholder='详细描写你要别人帮你跑腿代办的事情' name="detail">
+      </textarea>
+    </view>
+
+    <view class="input">
+      <input placeholder="填写你的称呼方式 如李先生" name="name"></input>
+    </view>
+
+    <view class="input">
+      <input placeholder="填写你希望支付的酬金(元)" name="money"></input>
+    </view>
+
+    <input class="hidden" name="selection" value="{{selectData[index]}}"></input>
+    <template is="selection" data="{{selectData,index,show}}" />
+
+    <view class="input">
+      <input placeholder="填写你的电话号码" name="phone"></input>
+    </view>
+
+    <view class="submit">
+      <button form-type="submit" class="submit-btn">发布</button>
+    </view>
+  </view>
+</form>
+
+<template is="copyright" data="{{time}}" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
