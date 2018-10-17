@@ -1,4 +1,4 @@
-绥宁买卖市场小程序
+
 SNMarket Mini Program Version 1.0
 
 1.We developed a mini program for the ordinary people of SuiNing county,which users can rent or sale houses to the others on the our platform.

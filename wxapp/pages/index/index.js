@@ -10,9 +10,9 @@ Page({
    */
   data: {
     imgUrls: [
-      "/images/swipers/swiper.png",
-      "/images/swipers/swiper2.png",
-      "/images/swipers/swiper3.png"
+      "/images/swipers/banner.png",
+      "/images/swipers/banner.png",
+      "/images/swipers/banner.png"
     ],
     current: 0,
     index: 0,

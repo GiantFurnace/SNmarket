@@ -1,7 +1,7 @@
 var local_database = [
   {
     rid:0,
-    img:"/images/one.png",
+    img:"/images/house.jpg",
     title:"长铺沿河街一室一厅拎包入住",
     condition:"1",
     acreage:"35",
@@ -20,7 +20,7 @@ var local_database = [
   },
   {
     rid:1,
-    img: "/images/one.png",
+    img: "/images/house2.jpg",
     title: "长铺沿河街一厅二室情侣套间",
     condition: "1",
     acreage: "45",

@@ -15,7 +15,7 @@
       <view>
           <image src="/images/icon/dianpu.png" class="icons" bindtap="onFunctionTap" data-fid="2">
           </image>
-          <view class="function-txt">店铺</view>
+          <view class="function-txt">商铺</view>
       </view>
     </view>
 </template>

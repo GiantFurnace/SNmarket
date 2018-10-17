@@ -88,7 +88,20 @@ Page({
 
   formSubmit:function(e){
     var val = e.detail.value;
-    app.onSubmitTap(val);
+    app.onSubmitTap(val,this.getCurrentTime);
+  },
+
+  getCurrentTime:function(time){
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+    let day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+    let hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+    let minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+    let second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+    let currentTime = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second; 
+
+    this.setData({currentTime:time});
   },
 
   /**

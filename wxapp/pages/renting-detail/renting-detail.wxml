@@ -2,7 +2,7 @@
 
 <view class="detail-container">
   <view class="room-img">
-    <image src="/images/one.png" class="room-profile"></image>
+    <image src="{{data.img}}" class="room-profile"></image>
   </view>
   <view class="room-title">{{data.title}}</view>
 

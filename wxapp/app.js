@@ -4,7 +4,14 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    
+    // wx.login({
+    //   success:res=>{
+    //     var code = res.code;
+    //     wx.request({
+    //       url: '',
+    //     })
+    //   }
+    // })
   },
 
   globalData: {
@@ -130,7 +137,16 @@ App({
     }
   },
 
-  onSubmitTap:function(val){
+  onSubmitTap:function(val,time){
+    let date = new Date();
+    let year = date.getFullYear();
+    let month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1 ;
+    let day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+    let hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+    let minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+    let second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+    let currentTime = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second; 
+
     if(val.thumb == ''){
       this.showToast('请先上传图片');
       return;
@@ -185,7 +201,10 @@ App({
           title: '发布',
           content: '确认发布吗？',
           success:res=>{
-            
+            if(res.confirm){
+              time(currentTime);
+              console.log(val);
+            }
           }
         })
       }

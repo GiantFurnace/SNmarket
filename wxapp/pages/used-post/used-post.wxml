@@ -45,7 +45,7 @@
     </view>
 
     <view class="detail-txtarea">
-      <textarea placeholder='在此处详细描述你要出售的二手宝贝信息，如新旧程度，产品功能等' class="detail">
+      <textarea placeholder='在此处详细描述你要出售的二手宝贝信息，如新旧程度，产品功能等' class="detail" name="detail">
       </textarea>
     </view>
 

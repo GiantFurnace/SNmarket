@@ -107,7 +107,7 @@
 
         <view class="input">
           <input placeholder="填写你的号码" name="telephone"></input>
-          <input value="{{time}}"></input>
+          <input value="{{currentTime}}" name="currentTime"></input>
         </view>
 
         <view class="submit">
