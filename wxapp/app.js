@@ -4,18 +4,31 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    // wx.login({
-    //   success:res=>{
-    //     var code = res.code;
-    //     wx.request({
-    //       url: '',
-    //     })
-    //   }
-    // })
+    wx.login({
+      success:res=>{
+        var code = res.code;
+        wx.request({
+          url: 'https://www.dianxuekeji.com/login',
+          header:{
+            'cotent-type':"application/json"
+          },
+          data:{
+            js_code:code
+          },
+          success:res => {
+            
+            this.globalData.uuid = res.data.data.uuid;
+          }
+        })
+      }
+    })
+    
+
+   
   },
 
   globalData: {
-    
+    userInfo:''
   },
 
   onChangeTap:function(id,key){
@@ -204,6 +217,8 @@ App({
             if(res.confirm){
               time(currentTime);
               console.log(val);
+            }else if(res.cancel){
+              console.log('取消');
             }
           }
         })

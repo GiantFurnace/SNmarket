@@ -12,7 +12,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.2",
-	"appid": "wx188dcfef5b125b65",
+	"appid": "wxcfc46f6f91ff7033",
 	"projectname": "SNMarket",
 	"isGameTourist": false,
 	"condition": {
@@ -33,12 +33,18 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 1,
 			"list": [
 				{
 					"id": -1,
 					"name": "发布页面",
-					"pathName": "pages/post/post"
+					"pathName": "pages/post/post",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的页面",
+					"pathName": "pages/me/me"
 				}
 			]
 		}

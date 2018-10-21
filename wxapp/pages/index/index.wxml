@@ -5,7 +5,7 @@
 <import src="../../templates/swiper-template/swiper.wxml" />
 
 <!-- 顶部功能栏 -->
-<view class="top-container">
+<view class="top-container" wx:if="{{}}">
   <view class="left">
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{location}}">
       <view class="location">{{location[index]}}</view>

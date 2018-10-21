@@ -4,10 +4,19 @@
   <view class="avatar-box">
     <image src="/images/profile/jb.png" class="avatar"></image>
   </view>
-  <view class="login-tips">登录后可以发布您的业务详情信息</view>
-  <view class="login-tips">抱歉，功能未开放:(</view>
-  <view class="login-tips">请以游客身份发布信息:)</view>
-  <view class="login-btn">微信登录</view>
+
+  <view class="user-nickname">神秘人</view>
+  <view class="user-gender">
+    <image src="/images/icon/male.png"></image>
+    <text>男</text>
+  </view>
+</view>
+
+<view class="operation-box">
+  <view class="operation-item" wx:for="{{operationItem}}" wx:key="key">
+    <image src="{{item.icon}}"></image>
+    <text>{{item.text}}</text>
+  </view>
 </view>
 
 <!-- 底部tabBar -->

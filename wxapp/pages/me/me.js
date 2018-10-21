@@ -6,14 +6,35 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    ufinfo:true,
+    operationItem:[
+      {
+        icon:'/images/icon/posted.png',
+        text:'我的发布'
+      },
+      {
+        icon: '/images/icon/logout.png',
+        text: '退出登录'
+      }
+    ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    //console.log(app.globalData.userInfo)
+    if(app.globalData.userInfo){
+      this.setData({ ufinfo: false})
+    }
     tabBar.tabbar("tabBar", 2, this);
+
+
+  },
+
+  onGotUserInfo:function(e){
+    this.setData({ ufinfo: false })
+    app.globalData.userInfo = e.detail.userInfo
   },
 
   onTabbarTap: function (e) {
@@ -21,6 +42,11 @@ Page({
     var key = 2;
     app.onTabbarTap(tid,key);
   },
+
+  // getUserInfo:function(e){
+    
+  //   app.globalData.userInfo = e.detail.userInfo;
+  // },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -33,7 +59,8 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+   
+  
   },
 
   /**

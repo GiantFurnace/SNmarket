@@ -29,6 +29,7 @@ Page({
       time: time
     });
     tabBar.tabbar("tabBar", 0, this);
+    
   },
 
   onRentingDetail: function(e) {
