@@ -1,5 +1,6 @@
 var tabBar = require('../../templates/tabBar-template/tabBar.js');
 var util = require('../../data/copyright-data.js');
+var utils = require('../../utils/utils.js');
 const app = getApp();
 Page({
 
@@ -57,19 +58,7 @@ Page({
   },
 
   onUploadTap: function (e) {
-    let that = this;
-    wx.chooseImage({
-      count: 1,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['album'],
-      success: function (res) {
-        const img = res.tempFilePaths;
-        that.setData({
-          isChoose: true,
-          imgUrl: img
-        })
-      }
-    })
+    utils.chooseImg(this);
   },
 
   /**

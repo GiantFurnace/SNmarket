@@ -3,9 +3,10 @@
 <import src="../../templates/copyright-template/copyright.wxml" />
 <import src="../../templates/function-template/function.wxml" />
 <import src="../../templates/swiper-template/swiper.wxml" />
+<import src="../../templates/mask-tips-template/mask-tips-template.wxml" />
 
 <!-- 顶部功能栏 -->
-<view class="top-container" wx:if="{{}}">
+<view class="top-container">
   <view class="left">
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{location}}">
       <view class="location">{{location[index]}}</view>
@@ -143,6 +144,8 @@
 </view>
 
 <!-- 广告合作页面 -->
+
+<template is="mask-tips" data="{{showTips}}" />
 
 <template is="copyright" data="{{time}}" />
 

@@ -4,31 +4,31 @@ App({
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    wx.login({
-      success:res=>{
-        var code = res.code;
-        wx.request({
-          url: 'https://www.dianxuekeji.com/login',
-          header:{
-            'cotent-type':"application/json"
-          },
-          data:{
-            js_code:code
-          },
-          success:res => {
-            
-            this.globalData.uuid = res.data.data.uuid;
-          }
-        })
+    
+  },
+  
+  getMyUserInfo:function(that,callback){
+    wx.getSetting({
+      success:(res) => {
+        if(res.authSetting['scope.userInfo']){
+          wx.login({
+            success:(res) => {
+
+            }
+          })
+        }else{
+          that.setData({ showTips:true });
+          return;
+        }
       }
     })
     
-
-   
   },
 
   globalData: {
-    userInfo:''
+    userInfo:null,
+    uuid:'',
+    url:'https://www.dianxuekeji.com/'
   },
 
   onChangeTap:function(id,key){
@@ -150,7 +150,7 @@ App({
     }
   },
 
-  onSubmitTap:function(val,time){
+  onSubmitTap:function(val,that){
     let date = new Date();
     let year = date.getFullYear();
     let month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1 ;
@@ -160,70 +160,79 @@ App({
     let second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
     let currentTime = year + "-" + month + "-" + day + " " + hour + ":" + minute + ":" + second; 
 
-    if(val.thumb == ''){
-      this.showToast('请先上传图片');
-      return;
-    }else if(val.title == ''){
-      this.showToast('请先输入标题');
-      return;
-    } else if (val.detail == '') {
-      this.showToast('请输入详细描述');
-      return;
-    } else if (val.address == '') {
-      this.showToast('请输入地址信息');
-      return;
-    } else if (val.property == '') {
-      this.showToast('请先输入产权');
-      return;
-    } else if (val.bedroom == '') {
-      this.showToast('请先输入卧室');
-      return;
-    } else if (val.drawing_room == '') {
-      this.showToast('请输入总厅');
-      return;
-    } else if (val.area == '') {
-      this.showToast('请先输入平米');
-      return;
-    } else if (val.price == '') {
-      this.showToast('输入元/月(平米)');
-      return;
-    } else if (val.totalprice == '') {
-      this.showToast('请先输入总价');
-      return;
-    } else if (val.deposit == '') {
-      this.showToast('请先输入押金');
-      return;
-    } else if (val.pay == '') {
-      this.showToast('请先输入付金');
-      return;
-    } else if (val.position == '') {
-      this.showToast('请先输入朝向');
-      return;
-    } else if (val.floor == '') {
-      this.showToast('请先输入楼层');
-      return;
-    }else if (val.publisher == '') {
-      this.showToast('请先输入称呼');
-      return;
-    } else if (val.telephone == '') {
-      this.showToast('请先输入号码');
-      return;
-    }else{
-      if(val !== ''){
-        wx.showModal({
-          title: '发布',
-          content: '确认发布吗？',
-          success:res=>{
-            if(res.confirm){
-              time(currentTime);
-              console.log(val);
-            }else if(res.cancel){
-              console.log('取消');
+    wx.getSetting({
+      success:(res) =>{
+        if(res.authSetting['scope.userInfo']){
+          if (val.thumb == '') {
+            this.showToast('请先上传图片');
+            return;
+          } else if (val.title == '') {
+            this.showToast('请先输入标题');
+            return;
+          } else if (val.detail == '') {
+            this.showToast('请输入详细描述');
+            return;
+          } else if (val.address == '') {
+            this.showToast('请输入地址信息');
+            return;
+          } else if (val.property == '') {
+            this.showToast('请先输入产权');
+            return;
+          } else if (val.bedroom == '') {
+            this.showToast('请先输入卧室');
+            return;
+          } else if (val.drawing_room == '') {
+            this.showToast('请输入总厅');
+            return;
+          } else if (val.area == '') {
+            this.showToast('请先输入平米');
+            return;
+          } else if (val.price == '') {
+            this.showToast('输入元/月(平米)');
+            return;
+          } else if (val.totalprice == '') {
+            this.showToast('请先输入总价');
+            return;
+          } else if (val.deposit == '') {
+            this.showToast('请先输入押金');
+            return;
+          } else if (val.pay == '') {
+            this.showToast('请先输入付金');
+            return;
+          } else if (val.position == '') {
+            this.showToast('请先输入朝向');
+            return;
+          } else if (val.floor == '') {
+            this.showToast('请先输入楼层');
+            return;
+          } else if (val.publisher == '') {
+            this.showToast('请先输入称呼');
+            return;
+          } else if (val.telephone == '') {
+            this.showToast('请先输入号码');
+            return;
+          } else {
+            if (val !== '') {
+              wx.showModal({
+                title: '发布',
+                content: '确认发布吗？',
+                success: res => {
+                  if (res.confirm) {
+                    time(currentTime);
+                    console.log(val);
+                  } else if (res.cancel) {
+                    console.log('取消');
+                  }
+                }
+              })
             }
           }
-        })
+        }else{
+          that.setData({ showTips:true });
+          return;
+        }
       }
-    }
+    })
   },
 
   showToast:function(tips){

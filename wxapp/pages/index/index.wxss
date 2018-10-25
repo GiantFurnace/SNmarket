@@ -2,6 +2,7 @@
 @import "../../templates/renting-template/renting.wxss";
 @import "../../templates/copyright-template/copyright.wxss";
 @import "../../templates/swiper-template/swiper.wxss";
+@import "../../templates/mask-tips-template/mask-tips-template.wxss";
 
 .top-container{
   width:96%;

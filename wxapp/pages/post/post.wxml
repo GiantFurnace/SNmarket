@@ -1,6 +1,7 @@
 <import src="../../templates/tabBar-template/tabBar.wxml" />
 <import src="../../templates/copyright-template/copyright.wxml" />
 <import src="../../templates/selection-template/selection.wxml" />
+<import src="../../templates/mask-tips-template/mask-tips-template.wxml" />
 
 <view>
   <view class="header">
@@ -118,6 +119,8 @@
   </view>
 
 </view>
+
+<template is="mask-tips" data="{{showTips}}" />
 
 <template is="copyright" data="{{time}}" />
 <template is="tabBar" data="{{tabBar:bindData.tabBar}}" />

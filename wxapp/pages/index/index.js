@@ -4,7 +4,6 @@ var util = require('../../data/copyright-data.js');
 const app = getApp();
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -16,7 +15,8 @@ Page({
     ],
     current: 0,
     index: 0,
-    location: ['长铺', '武阳', '海口']
+    location: ['长铺', '武阳', '海口'],
+    showTips:null
   },
 
   /**
@@ -30,6 +30,10 @@ Page({
     });
     tabBar.tabbar("tabBar", 0, this);
     
+  },
+
+  onGotUserInfo:function(e){
+    this.setData({ showTips: false });
   },
 
   onRentingDetail: function(e) {

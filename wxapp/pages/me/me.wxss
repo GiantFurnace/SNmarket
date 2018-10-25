@@ -1,5 +1,7 @@
 @import "../../templates/tabBar-template/tabBar.wxss";
+@import "../../templates/mask-tips-template/mask-tips-template.wxss";
 
+/* 用户信息样式开始 */
 .login-container{
   width:100%;
   display:flex;
@@ -8,12 +10,13 @@
 }
 
 .avatar-box{
-  margin-top:110rpx;
+  margin-top:100rpx;
 }
 
 .avatar{
   width:200rpx;
   height:200rpx;
+  border-radius: 50%;
 }
 
 .user-nickname{
@@ -36,9 +39,11 @@
   font-size: 24rpx;
   line-height: 50rpx;
 }
+/* 用户信息样式结束 */
 
+/* 操作栏样式开始 */
 .operation-box{
-  margin-top:30rpx;
+  margin-top:40rpx;
   border-top:10px solid #eee;
   display:flex;
   flex-direction: column;
@@ -71,3 +76,4 @@
   color: #666;
   font-size: 26rpx;
 }
+/* 操作栏样式结束 */

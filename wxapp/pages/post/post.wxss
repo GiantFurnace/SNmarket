@@ -1,6 +1,7 @@
 @import "../../templates/tabBar-template/tabBar.wxss";
 @import "../../templates/copyright-template/copyright.wxss";
 @import "../../templates/selection-template/selection.wxss";
+@import "../../templates/mask-tips-template/mask-tips-template.wxss";
 
 .header {
   width: 100%;

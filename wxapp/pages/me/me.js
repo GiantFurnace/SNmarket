@@ -1,40 +1,68 @@
 var tabBar = require('../../templates/tabBar-template/tabBar.js');
-const app = getApp();
+var app = getApp();
+var util = require('../../utils/utils.js');
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    ufinfo:true,
+    showTips:false,
     operationItem:[
       {
         icon:'/images/icon/posted.png',
-        text:'我的发布'
+        text:'我的发布',
+        id:0
       },
       {
-        icon: '/images/icon/logout.png',
-        text: '退出登录'
+        icon: '/images/icon/feedback.png',
+        text: '意见反馈',
+        id:1
       }
-    ]
+    ],
+    userInfo:'',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    //console.log(app.globalData.userInfo)
-    if(app.globalData.userInfo){
-      this.setData({ ufinfo: false})
-    }
     tabBar.tabbar("tabBar", 2, this);
 
+    wx.getSetting({
+      success:(res) => {
+        if(!res.authSetting['scope.userInfo']){
+          this.setData({ showTips: true });
+          return;
+        }
+      }
+    });
 
+    wx.getStorage({
+      key: 'userInfo',
+      success: (res) => {
+        var temp = {
+          nickName:res.data.nickName,
+          gender:res.data.gender,
+          avatarUrl:res.data.avatarUrl
+        }
+        this.setData({ userInfo:temp });
+      }
+    })
   },
 
   onGotUserInfo:function(e){
-    this.setData({ ufinfo: false })
-    app.globalData.userInfo = e.detail.userInfo
+    
+    wx.setStorage({
+      key: 'userInfo',
+      data: e.detail.userInfo,
+      success:(res) => {
+        console.log('写入缓存成功');
+      }
+    })
+
+    this.setData({ showTips: false,userInfo:e.detail.userInfo });
   },
 
   onTabbarTap: function (e) {
@@ -43,16 +71,13 @@ Page({
     app.onTabbarTap(tid,key);
   },
 
-  // getUserInfo:function(e){
-    
-  //   app.globalData.userInfo = e.detail.userInfo;
-  // },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    if (this.data.userInfo != '') {
+      wx.stopPullDownRefresh();
+    }
   },
 
   /**
